@@ -1,16 +1,12 @@
 document.addEventListener('DOMContentLoaded',()=>{
-  const hero=document.querySelector('.home-hero .hero-copy');
-  const brand=document.querySelector('.site-header .brand');
-  if(brand){brand.setAttribute('aria-label','StudentBnB home');const txt=brand.querySelector(':scope > span:last-child');if(txt)txt.innerHTML='Student<strong>BnB</strong><small>Temporary student stays</small>';}
-  if(hero){
-    document.title='StudentBnB — Soggiorni temporanei per studenti | 1 settimana, 2 settimane o 1 mese';
-    const meta=document.querySelector('meta[name="description"]');if(meta)meta.setAttribute('content','Soggiorni temporanei per studenti in studentati, case condivise e appartamenti studenteschi. Trova una stanza per una settimana, due settimane o un mese, anche per Erasmus, stage e periodi universitari brevi.');
-    const h=hero.querySelector('h1'),p=hero.querySelector(':scope > p');
-    hero.querySelectorAll('.studentbnb-tagline,.studentbnb-duration-options').forEach(el=>el.remove());
-    if(h){h.innerHTML='Vivi per un po’ nella <span>vita studentesca.</span>';const t=document.createElement('div');t.className='studentbnb-tagline';t.textContent='Il tuo soggiorno temporaneo, tra studenti.';h.before(t);}
-    if(p){p.classList.add('studentbnb-concept');p.textContent='Trova una stanza in studentato, in una casa condivisa da studenti o in un appartamento studentesco per Erasmus, stage, corsi, esami o semplicemente per qualche settimana.';const d=document.createElement('div');d.className='studentbnb-duration-options';d.innerHTML='<strong>1 settimana</strong><span>•</span><strong>2 settimane</strong><span>•</span><strong>1 mese</strong>';p.after(d);}
-    const sh=hero.querySelector('.search-card h2');if(sh)sh.textContent='Dove vuoi soggiornare?';
-  }
+  const base='https://studentbnb.it/';
+  const replaceText=()=>{const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;while((n=w.nextNode()))n.nodeValue=n.nodeValue.replaceAll('CasaStudent','StudentBnB');document.querySelectorAll('[aria-label]').forEach(e=>e.setAttribute('aria-label',e.getAttribute('aria-label').replaceAll('CasaStudent','StudentBnB')));};
+  replaceText();
+  document.querySelectorAll('.brand').forEach(b=>{const labels=[...b.children].filter(e=>e.tagName==='SPAN'&&!e.classList.contains('brand-icon'));const l=labels[labels.length-1];if(l)l.innerHTML='Student<strong>BnB</strong><small>Base to belong</small>';});
+  const hero=document.querySelector('.home-hero .hero-copy');if(hero){document.title='StudentBnB — Soggiorni temporanei per studenti | 1 settimana, 2 settimane o 1 mese';const m=document.querySelector('meta[name="description"]');if(m)m.content='Soggiorni temporanei per studenti in studentati, case condivise e appartamenti studenteschi. Trova una stanza per una settimana, due settimane o un mese per Erasmus, stage, corsi o brevi periodi universitari.';const h=hero.querySelector('h1'),p=hero.querySelector(':scope > p');hero.querySelectorAll('.studentbnb-tagline,.studentbnb-duration-options').forEach(el=>el.remove());if(h){h.innerHTML='Vivi per un po’ nel cuore della <span>vita studentesca.</span>';const t=document.createElement('div');t.className='studentbnb-tagline';t.textContent='La tua casa temporanea, tra studenti.';h.before(t);}if(p){p.classList.add('studentbnb-concept');p.textContent='Trova una stanza in uno studentato, una casa condivisa da studenti o un appartamento studentesco per Erasmus, stage, corsi, esami o qualche settimana in un’altra città.';const d=document.createElement('div');d.className='studentbnb-duration-options';d.innerHTML='<strong>1 settimana</strong><span>•</span><strong>2 settimane</strong><span>•</span><strong>1 mese</strong>';p.after(d);}const sh=hero.querySelector('.search-card h2');if(sh)sh.textContent='Dove vuoi soggiornare?';}
+  let c=document.querySelector('link[rel="canonical"]');if(!c){c=document.createElement('link');c.rel='canonical';document.head.appendChild(c)}c.href=base+(location.pathname==='/'?'':location.pathname.replace(/^\//,''))+location.search;
+  const schema=document.querySelector('#studentbnb-website-schema');if(schema)schema.textContent=JSON.stringify({'@context':'https://schema.org','@type':'WebSite',name:'StudentBnB',url:base,inLanguage:'it-IT'});
+  const og=document.querySelector('meta[property="og:site_name"]');if(og)og.content='StudentBnB — Base to belong';
   const intl=document.querySelector('.footer-international > strong');if(intl)intl.textContent='Per soggiorni più lunghi: CasaStudent';
   const copy=document.querySelector('.footer-bottom span:first-child');if(copy)copy.textContent='© 2026 StudentBnB';
   const login=document.querySelector('#login-title');if(login)login.textContent='Accedi a StudentBnB';
