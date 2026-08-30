@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /stats.html
-Sitemap: https://casastudent.it/sitemap.xml
+Sitemap: https://studentbnb.it/sitemap.xml
