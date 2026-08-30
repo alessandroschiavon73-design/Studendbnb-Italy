@@ -20,13 +20,11 @@ window.STUDENTBNB_CONFIG = Object.freeze({
 (function () {
   const cfg = window.STUDENTBNB_CONFIG;
   const sites = [
-    ["EU","Europe","assets/img/flag-eu.svg","https://studentbnb.eu/"],
     ["IT","Italia","assets/img/flag-it.svg","https://studentbnb.it/"],
     ["ES","España","assets/img/flag-es.svg","https://studentbnb.es/"],
     ["FR","France","assets/img/flag-fr.svg","https://studentbnb.fr/"],
     ["DE","Deutschland","assets/img/flag-de.svg","https://student-bnb.de/"],
-    ["PL","Polska","assets/img/flag-pl.svg","https://studentbnb.pl/"],
-    ["PT","Portugal","assets/img/flag-pt.svg","https://studentbnb.pt/"]
+    ["PL","Polska","assets/img/flag-pl.svg","https://studentbnb.pl/"]
   ];
   const ogImage = `https://${cfg.domain}/assets/img/italia-proposta1.webp`;
   function upsertMeta(key, value, content) { let element = document.head.querySelector(`meta[${key}=\"${value}\"]`); if (!element) { element = document.createElement("meta"); element.setAttribute(key, value); document.head.appendChild(element); } element.setAttribute("content", content); }
@@ -42,7 +40,10 @@ window.STUDENTBNB_CONFIG = Object.freeze({
     if (fp) fp.textContent = "StudentBnB è dedicato ai soggiorni temporanei nella comunità studentesca: una settimana, due settimane o un mese, per Erasmus, stage, corsi ed esami.";
     upsertMeta("name", "robots", "index,follow,max-image-preview:large"); upsertMeta("property", "og:site_name", "StudentBnB — Base & Belong"); upsertMeta("property", "og:type", "website"); upsertMeta("name", "twitter:card", "summary_large_image"); updateSeo(); addStructuredData();
     const page = location.pathname.endsWith("/") ? "" : location.pathname.split("/").pop(); if (!page || page === "index.html") sites.forEach(([code, , , url]) => upsertLink("alternate", url, code.toLowerCase()));
-    const box = document.querySelector(".footer-international .footer-country-links"); if (box) { box.innerHTML = sites.map(([code, label, flag, url]) => `<a href="${url}"${code === cfg.countryCode ? ' aria-current="page"' : ''}><img class="network-flag" src="${flag}" alt="" width="30" height="20"><span>${label}</span><span class="network-open" aria-hidden="true">↗</span></a>`).join(""); }
+    const box = document.querySelector(".footer-international .footer-country-links");
+    if (box) {
+      box.innerHTML = sites.map(([code, label, flag, url]) => `<a href="${url}"${code === cfg.countryCode ? ' aria-current="page"' : ' target="_blank" rel="noopener noreferrer"'}><img class="network-flag" src="${flag}" alt="" width="30" height="20"><span>${label}</span><span class="network-open" aria-hidden="true">↗</span></a>`).join("");
+    }
   }
   window.StudentBnBSEO = { update: updateSeo };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", apply); else apply();
