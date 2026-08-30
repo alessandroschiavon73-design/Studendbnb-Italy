@@ -1,0 +1,138 @@
+{
+  "schemaVersion": "1.1",
+  "scope": "EU",
+  "countryFrontend": {
+    "domain": "casastudent.it",
+    "countryCode": "IT",
+    "locale": "it-IT",
+    "currency": "EUR"
+  },
+  "entities": {
+    "countries": [
+      "code",
+      "name",
+      "locale",
+      "currency",
+      "domain"
+    ],
+    "cities": [
+      "id",
+      "country_code",
+      "slug",
+      "name",
+      "region",
+      "hero_image_url",
+      "active",
+      "market_type",
+      "student_market_band"
+    ],
+    "districts": [
+      "id",
+      "city_id",
+      "slug",
+      "name",
+      "active"
+    ],
+    "universities": [
+      "id",
+      "city_id",
+      "name",
+      "slug",
+      "active"
+    ],
+    "users": [
+      "id",
+      "email",
+      "email_verified_at",
+      "display_name",
+      "phone",
+      "whatsapp",
+      "country_code",
+      "created_at"
+    ],
+    "listings": [
+      "id",
+      "country_code",
+      "city_id",
+      "district_id",
+      "publisher_user_id",
+      "type",
+      "arrangement",
+      "price",
+      "expenses_included",
+      "expenses_amount",
+      "deposit",
+      "available_from",
+      "minimum_stay",
+      "notice",
+      "status",
+      "created_at",
+      "updated_at"
+    ],
+    "listing_images": [
+      "id",
+      "listing_id",
+      "url",
+      "position",
+      "is_cover"
+    ],
+    "student_requests": [
+      "id",
+      "country_code",
+      "city_id",
+      "user_id",
+      "type",
+      "budget_max",
+      "available_from",
+      "available_to",
+      "living_model",
+      "status",
+      "created_at",
+      "updated_at"
+    ],
+    "favorites": [
+      "user_id",
+      "listing_id",
+      "created_at"
+    ],
+    "saved_searches": [
+      "id",
+      "user_id",
+      "country_code",
+      "filters_json",
+      "created_at"
+    ],
+    "reports": [
+      "id",
+      "reporter_user_id",
+      "entity_type",
+      "entity_id",
+      "reason",
+      "status",
+      "created_at"
+    ]
+  },
+  "suggestedEndpoints": [
+    "GET /api/v1/countries/{countryCode}/cities",
+    "GET /api/v1/listings?country=IT&city_id={cityId}",
+    "GET /api/v1/listings/{id}",
+    "POST /api/v1/listings",
+    "GET /api/v1/student-requests?country=IT",
+    "POST /api/v1/student-requests",
+    "POST /api/v1/favorites",
+    "POST /api/v1/saved-searches"
+  ],
+  "migrationNote": "La modalità demo usa dati locali, ma countryCode, cityId, slug città e UUID di annunci/richieste sono già allineati alla stessa API europea prevista dal pacchetto spagnolo DB Ready v2.",
+  "citySelectionPolicy": {
+    "countryCode": "IT",
+    "threshold": "principali città e poli universitari fino alla fascia indicativa di circa 20.000+ studenti",
+    "levels": [
+      "laurea",
+      "laurea magistrale",
+      "dottorato"
+    ],
+    "marketUnit": "city or coherent university housing pole when campuses share the same rental market",
+    "selectedMarkets": 31,
+    "note": "La selezione è una regola del frontend e non una definizione legale o amministrativa delle iscrizioni comunali."
+  }
+}

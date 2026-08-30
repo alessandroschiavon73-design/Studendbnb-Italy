@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0F766E">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Cerco alloggio | CasaStudent</title>
+<meta name="description" content="Pubblica gratuitamente il tuo profilo e descrivi l'alloggio universitario che stai cercando.">
+<link rel="stylesheet" href="assets/css/studentbnb-brand.css?v=1"></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="StudentBnB home"><span class="brand-icon" aria-hidden="true"><span class="brand-cap">▰</span></span><span>Student<strong>BnB</strong><small>Trova la tua stanza. Vivi la tua città.</small></span></a>
+    <button class="menu-button" aria-label="Apri il menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Navigazione principale">
+      <a href="index.html#come-funziona">Come funziona</a><a href="studenti.html">Studenti in cerca</a><a class="nav-social-link" href="intergenerazionale.html">Casa solidale</a><a href="index.html#faq">FAQ</a><a href="index.html#contatti">Contatti</a>
+      <a class="nav-feature-link" href="cerco.html" aria-current="page">Cerco alloggio</a>
+      <a class="header-cta" href="pubblica.html">Pubblica annuncio gratis</a>
+      <a class="account-link" href="#" data-login>♙ <span data-account-label>Accedi</span></a>
+    </nav>
+  </div>
+</header>
+<div class="breadcrumb"><div class="container"><a href="index.html">Home</a><span>›</span><strong>Cerco alloggio</strong></div></div>
+
+<main class="form-shell">
+  <div class="container">
+    <div class="form-heading">
+      <span class="kicker">Fatti trovare da proprietari e coinquilini</span>
+      <h1>Pubblica ciò che cerchi</h1>
+      <p>Descrivi l’alloggio desiderato e presentati in modo semplice. Chi ha una stanza compatibile potrà contattarti direttamente.</p>
+    </div>
+    <div class="progress three" aria-label="Fasi del modulo">
+      <div class="progress-step active" data-step="1"><span>Richiesta</span></div>
+      <div class="progress-step active" data-step="2"><span>Profilo</span></div>
+      <div class="progress-step active" data-step="3"><span>Contatti</span></div>
+    </div>
+
+    <form id="student-request-form" class="publish-form">
+      <section class="form-section card">
+        <h2>1. Che cosa stai cercando?</h2>
+        <p>Indica città, zona, budget e periodo per ricevere soltanto proposte pertinenti.</p>
+        <div class="form-grid three">
+          <div class="field"><label for="request-city">Città universitaria *</label><select id="request-city" name="city" required><option value="">Seleziona</option></select></div>
+          <div class="field"><label for="request-zone">Prima zona preferita</label><select id="request-zone" name="zone"><option value="">Prima seleziona la città</option></select></div>
+          <div class="field"><label for="otherZones">Altre zone considerate</label><input id="otherZones" name="otherZones" placeholder="Es. Arcella, Centro"></div>
+          <div class="field"><label for="request-type">Tipologia *</label><select id="request-type" name="type" required><option value="">Seleziona</option><option>Stanza singola</option><option>Posto letto in doppia</option><option>Monolocale</option><option>Bilocale</option><option>Appartamento</option></select></div>
+          <div class="field"><label for="request-budget">Budget massimo mensile (€) *</label><input id="request-budget" name="budget" type="number" min="100" max="5000" required></div>
+          <div class="field"><label for="request-flexibility">Flessibilità</label><select id="request-flexibility" name="flexibility"><option>Date precise</option><option>± 7 giorni</option><option>± 15 giorni</option><option>± 30 giorni</option></select></div>
+          <div class="field"><label for="request-from">Ingresso desiderato *</label><input id="request-from" name="availableFrom" type="date" required></div>
+          <div class="field"><label for="request-to">Uscita prevista</label><input id="request-to" name="availableTo" type="date"></div>
+          <div class="field"><label for="request-duration">Formula</label><select id="request-duration" name="duration"><option>Anno accademico</option><option>Singolo semestre</option><option>Erasmus o tirocinio</option><option>12 mesi o più</option><option>Periodo estivo</option></select></div>
+          <div class="field"><label for="student-living-model">Tipo di convivenza</label><select id="student-living-model" name="livingModel"><option value="standard">Convivenza standard</option><option value="intergenerational">Valuto ospitalità solidale con una persona anziana</option></select></div>
+        </div>
+        <div id="student-intergenerational-fields" class="intergenerational-fields hidden">
+          <h3>Disponibilità per l’ospitalità solidale</h3>
+          <p>Indica soltanto piccoli aiuti compatibili con lo studio e concordati in anticipo.</p>
+          <div class="checkbox-grid">
+            <label class="check-option"><input type="checkbox" name="intergenerationalHelp" value="Compagnia e conversazione"> Compagnia e conversazione</label>
+            <label class="check-option"><input type="checkbox" name="intergenerationalHelp" value="Spesa o piccole commissioni"> Spesa o piccole commissioni</label>
+            <label class="check-option"><input type="checkbox" name="intergenerationalHelp" value="Supporto con telefono e computer"> Supporto con telefono e computer</label>
+            <label class="check-option"><input type="checkbox" name="intergenerationalHelp" value="Piccole attività domestiche condivise"> Piccole attività domestiche condivise</label>
+          </div>
+          <div class="field" style="margin-top:14px"><label for="student-intergenerational-hours">Tempo massimo indicativo</label><select id="student-intergenerational-hours" name="intergenerationalHours"><option>1–2 ore alla settimana</option><option>3–4 ore alla settimana</option><option>5–6 ore alla settimana</option></select></div>
+          <span class="micro-note">Non si tratta di assistenza sanitaria o personale né di un rapporto di lavoro.</span>
+        </div>
+      </section>
+
+      <section class="form-section card">
+        <h2>2. Il tuo profilo studente</h2>
+        <p>Una presentazione autentica aumenta la probabilità di essere contattati e aiuta a trovare una convivenza compatibile.</p>
+        <div class="form-grid three">
+          <div class="field"><label for="student-name">Nome pubblico *</label><input id="student-name" name="name" required placeholder="Es. Giulia"></div>
+          <div class="field"><label for="student-age">Età</label><input id="student-age" name="age" type="number" min="18" max="99"></div>
+          <div class="field"><label for="student-photo">Foto profilo facoltativa</label><input id="student-photo" name="photo" type="file" accept="image/jpeg,image/png,image/webp"><img id="student-photo-preview" class="photo-profile-preview" alt="Anteprima foto profilo"></div>
+          <div class="field"><label for="student-university">Università *</label><input id="student-university" name="university" required placeholder="Es. Università di Padova"></div>
+          <div class="field"><label for="student-course">Corso di studi *</label><input id="student-course" name="course" required placeholder="Es. Psicologia"></div>
+          <div class="field"><label for="student-year">Anno o livello</label><input id="student-year" name="studyYear" placeholder="Es. 2° anno / Master / Erasmus"></div>
+          <div class="field"><label for="student-languages">Lingue parlate *</label><input id="student-languages" name="languages" required placeholder="Italiano, inglese, spagnolo"></div>
+          <div class="field"><label for="student-smoking">Fumo</label><select id="student-smoking" name="smoking"><option>Non fumatore</option><option>Fumatore solo all’esterno</option><option>Fumatore</option><option>Preferisco non indicarlo</option></select></div>
+          <div class="field"><label for="student-pets">Animali</label><input id="student-pets" name="pets" placeholder="Es. nessun animale / un gatto"></div>
+          <div class="field"><label for="student-lifestyle">Ritmo quotidiano</label><select id="student-lifestyle" name="lifestyle"><option>Equilibrato</option><option>Tranquillo e studioso</option><option>Socievole</option><option>Spesso fuori casa</option><option>Orari variabili</option></select></div>
+          <div class="field"><label for="student-sociality">Convivenza preferita</label><select id="student-sociality" name="sociality"><option>Socievole ma rispettosa</option><option>Tranquilla e autonoma</option><option>Internazionale e conviviale</option><option>Solo condivisione delle spese</option><option>Sono flessibile</option></select></div>
+          <div class="field"><label for="student-cleanliness">Ordine e pulizie</label><select id="student-cleanliness" name="cleanliness"><option>Molto ordinato</option><option>Ordinato</option><option>Flessibile con turni condivisi</option><option>Preferisco non indicarlo</option></select></div>
+          <div class="field"><label for="student-cooking">Cucina</label><select id="student-cooking" name="cooking"><option>Cucino spesso</option><option>Cucino qualche volta</option><option>Cucino raramente</option><option>Mi piace cucinare insieme</option></select></div>
+          <div class="field full"><label for="student-bio">Presentati *</label><textarea id="student-bio" name="bio" rows="6" required placeholder="Racconta brevemente che cosa studi, che tipo di casa cerchi e come vivi gli spazi condivisi."></textarea><span class="profile-help">Non inserire documenti, dati finanziari o informazioni sensibili nella descrizione pubblica.</span></div>
+        </div>
+        <span class="field-label">Interessi</span>
+        <div class="checkbox-grid" style="margin-top:9px">
+          <label class="check-option"><input type="checkbox" name="interests" value="Sport"> Sport</label><label class="check-option"><input type="checkbox" name="interests" value="Cinema"> Cinema</label><label class="check-option"><input type="checkbox" name="interests" value="Musica"> Musica</label><label class="check-option"><input type="checkbox" name="interests" value="Viaggi"> Viaggi</label><label class="check-option"><input type="checkbox" name="interests" value="Cucina"> Cucina</label><label class="check-option"><input type="checkbox" name="interests" value="Studio"> Studio</label>
+        </div>
+      </section>
+
+      <section class="form-section card">
+        <h2>3. Contatti</h2>
+        <p>I contatti saranno utilizzabili soltanto dagli utenti che hanno effettuato l’accesso.</p>
+        <div class="form-grid three">
+          <div class="field"><label for="student-email">Email *</label><input id="student-email" name="email" type="email" required></div>
+          <div class="field"><label for="student-phone">Telefono</label><input id="student-phone" name="phone"></div>
+          <div class="field"><label for="student-whatsapp">WhatsApp</label><input id="student-whatsapp" name="whatsapp" placeholder="Es. +39 340 1234567"></div>
+        </div>
+        <label class="privacy-toggle"><input type="checkbox" required> Confermo di voler pubblicare le informazioni inserite. Ho letto la <a href="privacy.html" style="text-decoration:underline">nota privacy</a>.</label>
+        <div class="notice" style="margin-top:18px"><strong>Nota sul prototipo:</strong> la richiesta viene salvata solamente nel browser e sarà visibile sul medesimo dispositivo.</div>
+        <div class="form-actions"><a class="btn btn-white" href="studenti.html">Vedi studenti in cerca</a><button class="btn btn-yellow" type="submit">Salva e pubblica</button></div>
+        <div id="request-success" class="success-message" role="status"></div>
+      </section>
+    </form>
+  </div>
+</main>
+
+<footer class="site-footer" id="contatti"><div class="container"><div class="footer-grid">
+  <div><a class="brand" href="index.html" style="font-size:27px"><span>Student<strong>BnB</strong></span></a><p>La piattaforma dedicata alla mobilità abitativa degli studenti: costi, condizioni e servizi confrontabili con chiarezza.</p></div>
+  <div><h3>Esplora</h3><div class="footer-links"><a href="padova.html">Alloggi a Padova</a><a href="studenti.html">Studenti in cerca</a><a href="cerco.html">Cerco alloggio</a><a href="intergenerazionale.html">Ospitalità solidale</a><a href="pubblica.html">Pubblica annuncio</a></div></div>
+  <div><h3>Progetto</h3><div class="footer-links"><a href="index.html#come-funziona">Come funziona</a><a href="index.html#chi-siamo">Chi siamo</a><a href="index.html#faq">Domande frequenti</a></div></div>
+  <div><h3>Sicurezza</h3><div class="footer-links"><a href="privacy.html">Privacy e condizioni</a><a href="privacy.html#sicurezza">Prevenzione truffe</a><a href="mailto:segnalazioni@casastudent.it">Segnala un profilo</a></div></div>
+</div><div class="footer-international"><strong>CasaStudent in Europa</strong><div class="footer-country-links"><a href="index.html" aria-current="page"><span aria-hidden="true">🇮🇹</span> Italia</a><a href="https://casastudent.es/" target="_blank" rel="noopener"><span aria-hidden="true">🇪🇸</span> Spagna</a><a href="https://casastudent.fr/" target="_blank" rel="noopener"><span aria-hidden="true">🇫🇷</span> Francia</a><a href="https://casastudent.de/" target="_blank" rel="noopener"><span aria-hidden="true">🇩🇪</span> Germania</a><a href="https://casastudent.pl/" target="_blank" rel="noopener"><span aria-hidden="true">🇵🇱</span> Polonia</a></div></div><div class="footer-bottom"><span>© 2026 CasaStudent</span><span>Padova, Italia</span></div></div></footer>
+
+<div class="modal-backdrop" id="login-modal" role="dialog" aria-modal="true" aria-labelledby="login-title"><div class="modal"><button class="modal-close" data-close-modal aria-label="Chiudi">×</button><h2 id="login-title">Accedi a CasaStudent</h2><p>Salva ricerche e preferiti e utilizza i contatti protetti.</p><form id="login-form"><div class="field"><label for="login-email">Email</label><input id="login-email" name="email" type="email" required placeholder="nome@email.it"></div><button class="btn btn-yellow btn-block" type="submit">Continua</button></form></div></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/config.js"></script><script src="assets/js/data.js"></script><script src="assets/js/app.js"></script>
+<script src="assets/js/studentbnb-brand.js?v=1"></script></body>
+</html>

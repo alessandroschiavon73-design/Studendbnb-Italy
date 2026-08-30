@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0F766E">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Studenti in cerca di alloggio | CasaStudent</title>
+<meta name="description" content="Profili di studenti che cercano stanze e appartamenti nelle città universitarie italiane.">
+<link rel="stylesheet" href="assets/css/studentbnb-brand.css?v=1"></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="StudentBnB home"><span class="brand-icon" aria-hidden="true"><span class="brand-cap">▰</span></span><span>Student<strong>BnB</strong><small>Trova la tua stanza. Vivi la tua città.</small></span></a>
+    <button class="menu-button" aria-label="Apri il menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Navigazione principale">
+      <a href="index.html#come-funziona">Come funziona</a><a href="studenti.html" aria-current="page">Studenti in cerca</a><a class="nav-social-link" href="intergenerazionale.html">Casa solidale</a><a href="index.html#faq">FAQ</a><a href="index.html#contatti">Contatti</a>
+      <a class="nav-feature-link" href="cerco.html">Cerco alloggio</a><a class="header-cta" href="pubblica.html">Pubblica annuncio gratis</a><a class="account-link" href="#" data-login>♙ <span data-account-label>Accedi</span></a>
+    </nav>
+  </div>
+</header>
+<div class="breadcrumb"><div class="container"><a href="index.html">Home</a><span>›</span><strong>Studenti in cerca</strong></div></div>
+
+<main>
+  <section class="request-hero">
+    <div class="container request-hero-grid">
+      <div><span class="kicker">Il mercato funziona in entrambe le direzioni</span><h1>Scopri chi sta cercando casa</h1><p>Proprietari e coinquilini possono trovare studenti compatibili per città, budget, periodo e stile di convivenza.</p></div>
+      <a class="btn btn-yellow" href="cerco.html">+ Pubblica la tua richiesta</a>
+    </div>
+  </section>
+
+  <section class="filters" aria-label="Filtri dei profili">
+    <div class="container filter-grid student-filter-grid">
+      <label>Città<select id="student-filter-city"><option value="">Tutte le città</option></select></label>
+      <label>Zona<select id="student-filter-zone"><option value="">Tutte le zone</option></select></label>
+      <label>Tipologia<select id="student-filter-type"><option value="">Tutte</option><option>Stanza singola</option><option>Posto letto in doppia</option><option>Monolocale</option><option>Bilocale</option><option>Appartamento</option></select></label>
+      <label>Budget almeno<select id="student-filter-budget"><option value="">Qualsiasi</option><option value="350">€ 350</option><option value="450">€ 450</option><option value="550">€ 550</option><option value="800">€ 800</option></select></label>
+      <label>Ingresso entro<input id="student-filter-available" type="date"></label>
+      <details class="advanced-filters">
+        <summary>Altri filtri</summary>
+        <div class="advanced-filter-grid">
+          <label>Formula<select id="student-filter-living-model"><option value="">Tutte</option><option value="standard">Convivenza standard</option><option value="intergenerational">Ospitalità solidale</option></select></label>
+          <label>Università o corso<input id="student-filter-university" type="search" placeholder="Es. Psicologia"></label>
+          <label>Lingua<input id="student-filter-language" type="search" placeholder="Es. inglese"></label>
+          <label>Fumo<select id="student-filter-smoking"><option value="">Qualsiasi</option><option value="non fumat">Non fumatore</option><option value="esterno">Solo all’esterno</option><option value="fumatore">Fumatore</option></select></label>
+          <label>Ordina per<select id="student-filter-sort"><option value="recent">Più recenti</option><option value="budget-asc">Budget crescente</option><option value="budget-desc">Budget decrescente</option></select></label>
+        </div>
+      </details>
+    </div>
+    <div class="container filter-actions"><button class="btn btn-white" type="button" data-save-alert>🔔 Avvisami dei nuovi studenti</button></div>
+  </section>
+
+  <section class="container">
+    <div class="results-bar"><strong id="student-request-count">Studenti in cerca</strong><div class="results-actions"><a href="padova.html" class="btn btn-white">Vedi gli alloggi</a><a href="cerco.html" class="btn btn-yellow">Cerco alloggio</a></div></div>
+    <div id="student-request-results" class="request-list" aria-live="polite"></div>
+    <div class="tip-strip"><span class="icon-circle">💡</span><div><strong>Contatti pertinenti</strong><br><span>Prima di scrivere, verifica città, periodo, budget e preferenze di convivenza indicate dallo studente.</span></div></div>
+  </section>
+</main>
+
+<footer class="site-footer" id="contatti"><div class="container"><div class="footer-grid">
+  <div><a class="brand" href="index.html" style="font-size:27px"><span>Student<strong>BnB</strong></span></a><p>La piattaforma dedicata alla mobilità abitativa degli studenti: costi, condizioni e servizi confrontabili con chiarezza.</p></div>
+  <div><h3>Esplora</h3><div class="footer-links"><a href="padova.html">Alloggi a Padova</a><a href="studenti.html">Studenti in cerca</a><a href="cerco.html">Cerco alloggio</a><a href="intergenerazionale.html">Ospitalità solidale</a><a href="pubblica.html">Pubblica annuncio</a></div></div>
+  <div><h3>Progetto</h3><div class="footer-links"><a href="index.html#come-funziona">Come funziona</a><a href="index.html#chi-siamo">Chi siamo</a><a href="index.html#faq">Domande frequenti</a></div></div>
+  <div><h3>Sicurezza</h3><div class="footer-links"><a href="privacy.html">Privacy e condizioni</a><a href="privacy.html#sicurezza">Prevenzione truffe</a><a href="mailto:segnalazioni@casastudent.it">Segnala un profilo</a></div></div>
+</div><div class="footer-international"><strong>CasaStudent in Europa</strong><div class="footer-country-links"><a href="index.html" aria-current="page"><span aria-hidden="true">🇮🇹</span> Italia</a><a href="https://casastudent.es/" target="_blank" rel="noopener"><span aria-hidden="true">🇪🇸</span> Spagna</a><a href="https://casastudent.fr/" target="_blank" rel="noopener"><span aria-hidden="true">🇫🇷</span> Francia</a><a href="https://casastudent.de/" target="_blank" rel="noopener"><span aria-hidden="true">🇩🇪</span> Germania</a><a href="https://casastudent.pl/" target="_blank" rel="noopener"><span aria-hidden="true">🇵🇱</span> Polonia</a></div></div><div class="footer-bottom"><span>© 2026 CasaStudent</span><span>Padova, Italia</span></div></div></footer>
+
+<div class="modal-backdrop" id="login-modal" role="dialog" aria-modal="true" aria-labelledby="login-title"><div class="modal"><button class="modal-close" data-close-modal aria-label="Chiudi">×</button><h2 id="login-title">Accedi a CasaStudent</h2><p>Salva ricerche e preferiti e utilizza i contatti protetti.</p><form id="login-form"><div class="field"><label for="login-email">Email</label><input id="login-email" name="email" type="email" required placeholder="nome@email.it"></div><button class="btn btn-yellow btn-block" type="submit">Continua</button></form></div></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/config.js"></script><script src="assets/js/data.js"></script><script src="assets/js/app.js"></script>
+<script src="assets/js/studentbnb-brand.js?v=1"></script></body>
+</html>

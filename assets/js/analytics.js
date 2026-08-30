@@ -1,0 +1,22 @@
+(function(){
+  if(window.__STUDENTBNB_ANALYTICS_LOADED__) return;
+  window.__STUDENTBNB_ANALYTICS_LOADED__=true;
+  const cfg=window.STUDENTBNB_CONFIG||{};
+  const code=cfg.countryCode||document.documentElement.lang?.slice(0,2).toUpperCase()||'EU';
+  const key=`studentbnb:stats:${code}:v1`;
+  const sessionKey=`studentbnb:session:${code}:v1`;
+  const path=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+  const isStats=path==='stats.html';
+  const empty=()=>({version:1,country:code,pageViews:0,sessions:0,ctaClicks:0,internalClicks:0,outboundClicks:0,pages:{},firstSeen:null,lastSeen:null});
+  function read(){try{return {...empty(),...(JSON.parse(localStorage.getItem(key)||'{}'))};}catch(_){return empty();}}
+  function write(s){try{localStorage.setItem(key,JSON.stringify(s));}catch(_){}}
+  function update(fn){const s=read();fn(s);s.lastSeen=new Date().toISOString();if(!s.firstSeen)s.firstSeen=s.lastSeen;write(s);window.StudentBnBStats=s;return s;}
+  if(!isStats){
+    update(s=>{s.pageViews++;s.pages[path]=(s.pages[path]||0)+1;if(!sessionStorage.getItem(sessionKey)){s.sessions++;try{sessionStorage.setItem(sessionKey,'1')}catch(_){}}});
+    addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[href]');if(!a)return;update(s=>{const href=a.getAttribute('href')||'';if(a.classList.contains('header-cta')||a.classList.contains('btn')||a.classList.contains('publish-choice'))s.ctaClicks++;if(/^https?:/i.test(href)&&!href.includes(location.hostname))s.outboundClicks++;else if(href&&!href.startsWith('#')&&!href.startsWith('mailto:')&&!href.startsWith('tel:'))s.internalClicks++;});},{passive:true});
+    setTimeout(()=>{try{window.StudentBnBAPI?.track?.('page_view',{page:path,local:true});}catch(_){}},600);
+  }else window.StudentBnBStats=read();
+  function addStatsLink(){const label={IT:'Statistiche',ES:'Estadísticas',FR:'Statistiques',DE:'Statistiken',PL:'Statystyki',PT:'Estatísticas'}[code]||'Statistics';const box=document.querySelector('.footer-bottom')||document.querySelector('.footer-international');if(box&&!box.querySelector('[data-stats-link]')){const a=document.createElement('a');a.href='stats.html';a.dataset.statsLink='1';a.textContent=label;a.style.cssText='color:inherit;text-decoration:underline;margin-left:12px';box.appendChild(a);}}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',addStatsLink);else addStatsLink();
+})();
+(function(){if(document.querySelector('script[data-city-visuals]'))return;const s=document.createElement('script');s.src='assets/js/city-visuals.js?v=20260828';s.defer=true;s.dataset.cityVisuals='1';document.head.appendChild(s)})();

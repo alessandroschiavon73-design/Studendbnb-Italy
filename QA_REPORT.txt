@@ -1,0 +1,15 @@
+STUDENTBNB ITALIA DB READY — QA
+===============================
+
+PASS — 9 pagine HTML presenti.
+PASS — 31 città e poli universitari italiani presenti.
+PASS — ogni città dispone di uno slug stabile.
+PASS — config.js identifica casastudent.it, countryCode IT e locale it-IT.
+PASS — cityId nel formato city_it_{slug}.
+PASS — nuovi annunci e richieste usano UUID quando disponibile.
+PASS — annunci e richieste demo normalizzati con countryCode, cityId e citySlug.
+PASS — database-contract.json allineato allo schema europeo della versione spagnola DB Ready v2.
+PASS — endpoint futuri /api/v1 filtrati per country=IT e city_id.
+PASS — modalità demo/localStorage conservata fino all’attivazione del backend comune.
+
+NOTA — Il pacchetto prepara il frontend italiano al database comune, ma non include il servizio backend né il provider di verifica e-mail.
