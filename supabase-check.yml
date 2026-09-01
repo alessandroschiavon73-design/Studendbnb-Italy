@@ -1,0 +1,45 @@
+name: Supabase connection check
+
+on:
+
+  workflow_dispatch:
+
+permissions:
+
+  contents: read
+
+jobs:
+
+  check-supabase:
+
+    runs-on: ubuntu-latest
+
+    env:
+
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+
+    steps:
+
+      - name: Checkout repository
+
+        uses: actions/checkout@v4
+
+      - name: Setup Supabase CLI
+
+        uses: supabase/setup-cli@v1
+
+        with:
+
+          version: latest
+
+      - name: Check Supabase connection
+
+        run: |
+
+          supabase projects list
+
+          echo "Supabase authentication OK"
+
+          echo "Project ref configured: $SUPABASE_PROJECT

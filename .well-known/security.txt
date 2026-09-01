@@ -1,0 +1,4 @@
+Contact: mailto:segnalazioni@casastudent.it
+Expires: 2027-08-31T23:59:59Z
+Canonical: https://casastudent.it/.well-known/security.txt
+Preferred-Languages: it, en
