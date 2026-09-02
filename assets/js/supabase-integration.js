@@ -475,9 +475,8 @@
       await refreshRemoteCache({ reload: true });
       document.documentElement.dataset.casastudentDatabase = "connected";
     } catch (error) {
-      console.error("CasaStudent Supabase integration", error);
-      document.documentElement.dataset.casastudentDatabase = "error";
-      notify(`Database non raggiungibile: ${error.message}`, true);
+      console.warn("StudentBnB database unavailable; using the local catalogue", error);
+      document.documentElement.dataset.casastudentDatabase = "fallback";
     }
   }
 

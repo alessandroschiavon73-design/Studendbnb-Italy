@@ -49,7 +49,7 @@ window.STUDENTBNB_CONFIG = Object.freeze({
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", apply); else apply();
 })();
 (function(){if(document.querySelector('script[data-studentbnb-analytics]'))return;const s=document.createElement('script');s.src='assets/js/analytics.js?v=20260824';s.defer=true;s.dataset.studentbnbAnalytics='1';document.head.appendChild(s)})();
-(function(){if(document.querySelector('script[data-studentbnb-supabase]'))return;const s=document.createElement('script');s.src='assets/js/supabase-integration.js?v=20260827';s.defer=true;s.dataset.studentbnbSupabase='1';document.head.appendChild(s)})();
+(function(){if(document.querySelector('script[data-studentbnb-supabase]'))return;const s=document.createElement('script');s.src='assets/js/supabase-integration.js?v=20260902-final';s.defer=true;s.dataset.studentbnbSupabase='1';document.head.appendChild(s)})();
 
 (function () {
   const cfg = window.STUDENTBNB_CONFIG || {};
