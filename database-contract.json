@@ -1,8 +1,8 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.3",
   "scope": "EU",
   "countryFrontend": {
-    "domain": "casastudent.it",
+    "domain": "studentbnb.it",
     "countryCode": "IT",
     "locale": "it-IT",
     "currency": "EUR"
@@ -59,6 +59,11 @@
       "type",
       "arrangement",
       "price",
+      "monthly_reference_price",
+      "studentbnb_price_7",
+      "studentbnb_price_14",
+      "studentbnb_price_30",
+      "studentbnb_uplift_percent",
       "expenses_included",
       "expenses_amount",
       "deposit",
@@ -83,6 +88,7 @@
       "user_id",
       "type",
       "budget_max",
+      "stay_duration",
       "available_from",
       "available_to",
       "living_model",
@@ -134,5 +140,19 @@
     "marketUnit": "city or coherent university housing pole when campuses share the same rental market",
     "selectedMarkets": 31,
     "note": "La selezione è una regola del frontend e non una definizione legale o amministrativa delle iscrizioni comunali."
+  },
+  "studentBnBPricing": {
+    "allowedDurationsDays": [
+      7,
+      14,
+      30
+    ],
+    "monthlyReferenceField": "monthly_reference_price",
+    "suggestedUpliftPercent": 25,
+    "editableUpliftRangePercent": [
+      20,
+      30
+    ],
+    "note": "I prezzi 7/14/30 giorni sono salvati separatamente; il +25% è un suggerimento modificabile, non un vincolo."
   }
 }

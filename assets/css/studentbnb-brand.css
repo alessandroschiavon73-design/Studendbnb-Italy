@@ -11,3 +11,11 @@
 .casastudent-family{margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.16);font-size:13px}.casastudent-family a{font-weight:800;text-decoration:underline;text-underline-offset:3px}
 .site-footer{background:#0F766E!important;color:#fff!important;border-top-color:rgba(255,255,255,.18)!important}.site-footer .brand,.site-footer h2,.site-footer h3,.site-footer strong{color:#fff!important}.site-footer .brand strong{color:#99F6E4!important}.site-footer p,.site-footer a,.site-footer .footer-links a{color:#D8F3EF!important}.site-footer .footer-grid,.site-footer .footer-international,.site-footer .footer-bottom{border-color:rgba(255,255,255,.16)!important}.site-footer .footer-country-links a{background:rgba(255,255,255,.06)!important;border-color:rgba(255,255,255,.24)!important;color:#fff!important}.site-footer .footer-country-links a:hover,.site-footer .footer-country-links a[aria-current="page"]{border-color:#99F6E4!important;box-shadow:0 0 0 1px #99F6E4 inset}.site-footer .network-open{color:#99F6E4!important}
 @media(max-width:700px){.site-header .brand{font-size:28px;line-height:1.05}.site-header .brand small{font-size:11px;margin-top:3px}.site-header .brand>span:last-child::after{font-size:9px;margin-top:3px}.header-inner{height:auto;min-height:82px;padding:10px 0}.brand-icon{width:46px;height:46px;flex:0 0 46px}.studentbnb-duration-options{gap:7px;font-size:12px}.studentbnb-duration-options strong{padding:6px 9px}.city-hero-bg{opacity:1!important;background-position:center center!important}.city-hero-bg:before{display:none!important}.city-hero:after{background:linear-gradient(180deg,rgba(12,18,25,.06) 24%,rgba(12,18,25,.76) 100%)!important}}
+
+
+/* StudentBnB test-stay price ladder */
+.test-price-breakdown{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:4px 9px;margin-top:4px;font-size:12px;font-weight:800;line-height:1.3;color:#40505a}
+.test-price-breakdown span{white-space:nowrap}
+.detail-test-prices{display:flex;flex-wrap:wrap;gap:5px 12px;margin-top:5px;font-size:13px;font-weight:800;line-height:1.35;color:#40505a}
+.monthly-reference{display:block;margin-top:5px;font-size:12px;font-weight:600;color:#68747c}
+@media(max-width:760px){.test-price-breakdown{justify-content:flex-start}.detail-test-prices{font-size:12px}}

@@ -121,3 +121,14 @@ document.addEventListener('DOMContentLoaded',()=>{
     f.appendChild(b);
   }
 });
+
+(function(){
+  const apply=()=>{
+    const canonical=document.querySelector('link[rel="canonical"]')?.href||location.href;
+    const description=document.querySelector('meta[name="description"]')?.content||'';
+    let schema=document.querySelector('#studentbnb-webpage-schema');
+    if(!schema){schema=document.createElement('script');schema.id='studentbnb-webpage-schema';schema.type='application/ld+json';document.head.appendChild(schema);}
+    schema.textContent=JSON.stringify({'@context':'https://schema.org','@type':'WebPage',name:document.title,url:canonical,description,inLanguage:document.documentElement.lang||'it-IT'});
+  };
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>setTimeout(apply,0));else setTimeout(apply,0);
+})();
