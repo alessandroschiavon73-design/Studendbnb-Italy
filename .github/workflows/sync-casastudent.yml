@@ -1,9 +1,12 @@
-name: Sync CasaStudent master
+name: Manual CasaStudent import (protected)
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '17 3 * * *'
+    inputs:
+      confirm_overwrite:
+        description: 'Type IMPORT to replace portal files from CasaStudent'
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -12,10 +15,11 @@ env:
   SOURCE_REPO: alessandroschiavon73-design/CasaStudentItaly
   CASA_URL: https://casastudent.it
   STUDENT_URL: https://studentbnb.it
-  BRAND_VERSION: '5'
+  BRAND_VERSION: '20260902-final'
 
 jobs:
   sync:
+    if: ${{ github.event.inputs.confirm_overwrite == 'IMPORT' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
