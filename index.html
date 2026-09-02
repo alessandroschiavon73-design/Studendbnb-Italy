@@ -1,184 +1,21 @@
 <!doctype html>
 <html lang="it">
 <head>
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0F766E">
 <link rel="stylesheet" href="assets/css/style.css?v=20260824-map-soft-fade">
-
 <title>StudentBnB — Trova la tua stanza nella città universitaria</title>
 <meta name="description" content="Stanze, posti letto e appartamenti nelle principali città universitarie italiane, con costi e condizioni confrontabili.">
 <link rel="stylesheet" href="assets/css/studentbnb-brand.css?v=5"></head>
 <body>
-
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html" aria-label="StudentBnB home">
-      <span class="brand-icon" aria-hidden="true"><span class="brand-cap">▰</span></span>
-      <span>Casa<strong>Student</strong><small>Base &amp; Belong</small></span>
-    </a>
-    <button class="menu-button" aria-label="Apri il menu" aria-expanded="false">☰</button>
-    <nav class="main-nav" aria-label="Navigazione principale">
-      <a href="index.html#come-funziona">Come funziona</a>
-      <a href="studenti.html">Studenti in cerca</a>
-      <a class="nav-social-link" href="intergenerazionale.html">Casa solidale</a>
-      <a class="nav-feature-link" href="cerco.html">Cerco alloggio</a>
-      <a class="header-cta" href="pubblica.html">Pubblica annuncio gratis</a>
-      <a class="account-link" href="#" data-login>♙ <span data-account-label>Accedi</span></a>
-    </nav>
-  </div>
-</header>
+<header class="site-header"><div class="container header-inner"><a class="brand" href="index.html" aria-label="StudentBnB home"><span class="brand-icon" aria-hidden="true"><span class="brand-cap">▰</span></span><span>Student<strong>BnB</strong><small>Prova prima di scegliere</small></span></a><button class="menu-button" aria-label="Apri il menu" aria-expanded="false">☰</button><nav class="main-nav" aria-label="Navigazione principale"><a href="index.html#come-funziona">Come funziona</a><a href="studenti.html">Studenti in cerca</a><a class="nav-social-link" href="intergenerazionale.html">Casa solidale</a><a class="nav-feature-link" href="cerco.html">Cerco alloggio</a><a class="header-cta" href="pubblica.html">Pubblica annuncio gratis</a><a class="account-link" href="#" data-login>♙ <span data-account-label>Accedi</span></a></nav></div></header>
 <main>
-  <section class="home-hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <h1>Trova la tua<br>stanza nella tua<br><span>città universitaria</span></h1>
-        <p>La bacheca dedicata a studenti e proprietari. Semplice, trasparente e gratuita.</p>
-        <form class="search-card" id="home-search">
-          <h2>Dove studi?</h2>
-          <p>Seleziona la città e il tipo di alloggio.</p>
-          <div class="field">
-            <label for="home-city">Città universitaria</label>
-            <select id="home-city" name="city">
-              <option value="padova">Padova</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="home-type">Cosa cerchi?</label>
-            <select id="home-type" name="type">
-              <option value="">Tutte le tipologie</option>
-              <option value="Stanza singola">Stanza singola</option>
-              <option value="Posto letto in doppia">Posto letto in doppia</option>
-              <option value="Bilocale">Bilocale</option>
-              <option value="Appartamento">Appartamento</option>
-            </select>
-          </div>
-          <button class="btn btn-yellow btn-block" type="submit">Cerca annunci</button>
-        </form>
-        <div class="hero-market-actions" aria-label="Altre azioni principali">
-          <a href="cerco.html"><strong>Cerco casa</strong><small>Pubblica la tua richiesta</small></a>
-          <a href="pubblica.html"><strong>Offro un alloggio</strong><small>Trova uno studente</small></a>
-        </div>
-        <div class="explore-map"><span class="explore-arrow">↗</span><span>Oppure esplora la mappa</span></div>
-      </div>
-      <div class="map-stage blended-map" aria-label="Mappa illustrata delle città universitarie italiane">
-        <img src="assets/img/italia-proposta1.webp" alt="Mappa illustrata dell'Italia con città universitarie e monumenti">
-        <a class="map-hotspot hot-padova" href="/padova/" aria-label="Apri gli annunci di Padova"></a>
-        <a class="map-hotspot hot-bologna" href="/bologna/" aria-label="Apri gli annunci di Bologna"></a>
-        <a class="map-hotspot hot-roma" href="padova.html?city=roma" aria-label="Apri gli annunci di Roma"></a>
-        <a class="map-hotspot hot-milano" href="/milano/" aria-label="Apri gli annunci di Milano"></a>
-        <a class="map-hotspot hot-torino" href="padova.html?city=torino" aria-label="Apri gli annunci di Torino"></a>
-        <a class="map-hotspot hot-firenze" href="padova.html?city=firenze" aria-label="Apri gli annunci di Firenze"></a>
-        <a class="map-hotspot hot-napoli" href="padova.html?city=napoli" aria-label="Apri gli annunci di Napoli"></a>
-        <a class="map-hotspot hot-palermo" href="padova.html?city=palermo" aria-label="Apri gli annunci di Palermo"></a>
-        <a class="map-hotspot hot-trento" href="padova.html?city=trento" aria-label="Apri gli annunci di Trento"></a>
-        <a class="map-hotspot hot-trieste" href="padova.html?city=trieste" aria-label="Apri gli annunci di Trieste"></a>
-        <a class="map-hotspot hot-pisa" href="padova.html?city=pisa" aria-label="Apri gli annunci di Pisa"></a>
-        <a class="map-hotspot hot-ancona" href="padova.html?city=ancona" aria-label="Apri gli annunci di Ancona"></a>
-        <a class="map-hotspot hot-bari" href="padova.html?city=bari" aria-label="Apri gli annunci di Bari"></a>
-        <a class="map-hotspot hot-cagliari" href="padova.html?city=cagliari" aria-label="Apri gli annunci di Cagliari"></a>
-      </div>
-    </div>
-    <div class="container value-strip" id="come-funziona">
-      <div class="value-item"><span class="icon-circle">🎓</span><div><h3>Per studenti</h3><p>Trova un’offerta oppure <a href="cerco.html" style="text-decoration:underline">pubblica ciò che cerchi</a>.</p></div></div>
-      <div class="value-item"><span class="icon-circle">⌂</span><div><h3>Per proprietari</h3><p>Pubblica l’alloggio o consulta gli <a href="studenti.html" style="text-decoration:underline">studenti interessati</a>.</p></div></div>
-      <div class="value-item"><span class="icon-circle">♡</span><div><h3>Confronto trasparente</h3><p>Canone, spese, deposito, durata e preavviso.</p></div></div>
-    </div>
-  </section>
-
-  <section class="solidarity-home" id="casa-solidale">
-    <div class="container solidarity-home-grid">
-      <div class="solidarity-visual" aria-hidden="true"><span>👵</span><b>+</b><span>🎓</span></div>
-      <div>
-        <span class="kicker">Ospitalità solidale tra generazioni</span>
-        <h2>Una stanza, una presenza in più</h2>
-        <p>Una persona anziana può offrire una stanza a prezzo agevolato a uno studente o una studentessa, ricevendo in cambio compagnia e un piccolo aiuto concordato nella vita quotidiana.</p>
-        <div class="solidarity-points"><span>✓ Canone agevolato</span><span>✓ Patti chiari</span><span>✓ Nessuna assistenza sanitaria</span></div>
-      </div>
-      <div class="solidarity-actions">
-        <a class="btn btn-dark" href="intergenerazionale.html">Scopri come funziona</a>
-        <a class="btn btn-white" href="pubblica.html?formula=intergenerazionale">Offro una stanza</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="city-section" id="citta">
-    <div class="container">
-      <h2 class="section-title">Le città più cercate</h2>
-      <div class="city-grid">
-        <a class="city-card" href="/padova/"><img src="assets/img/citta-padova.webp" alt="Padova"><strong>Padova</strong></a>
-        <a class="city-card" href="/bologna/"><img src="assets/img/citta-bologna.webp" alt="Bologna"><strong>Bologna</strong></a>
-        <a class="city-card" href="/milano/"><img src="assets/img/citta-milano.webp" alt="Milano"><strong>Milano</strong></a>
-        <a class="city-card" href="padova.html?city=roma"><img src="assets/img/citta-roma.webp" alt="Roma"><strong>Roma</strong></a>
-        <a class="city-card" href="padova.html?city=torino"><img src="assets/img/citta-torino.webp" alt="Torino"><strong>Torino</strong></a>
-        <a class="city-card" href="padova.html?city=firenze"><img src="assets/img/citta-firenze.webp" alt="Firenze"><strong>Firenze</strong></a>
-        <a class="city-card" href="padova.html?city=pisa"><img src="assets/img/citta-pisa.webp" alt="Pisa"><strong>Pisa</strong></a>
-        <a class="city-card" href="padova.html?city=napoli"><img src="assets/img/citta-napoli.webp" alt="Napoli"><strong>Napoli</strong></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="container" id="chi-siamo">
-    <div class="publish-banner">
-      <div class="student-illustration" aria-hidden="true">🧑‍🎓</div>
-      <div><h3>Pubblica gratis</h3><p>Scegli il percorso più adatto alla tua situazione.</p></div>
-      <div class="publish-choice-grid" aria-label="Scegli il tipo di pubblicazione">
-        <a class="publish-choice" href="cerco.html"><span class="choice-icon" aria-hidden="true">🏠</span><span><strong>Cerco casa</strong><small>Pubblica il tuo profilo e descrivi l’alloggio che cerchi.</small></span><b aria-hidden="true">›</b></a>
-        <a class="publish-choice" href="pubblica.html"><span class="choice-icon" aria-hidden="true">🔑</span><span><strong>Offro un alloggio</strong><small>Pubblica una stanza, un posto letto o un appartamento.</small></span><b aria-hidden="true">›</b></a>
-        <a class="publish-choice solidarity-choice" href="intergenerazionale.html"><span class="choice-icon" aria-hidden="true">🤝</span><span><strong>Ospitalità solidale</strong><small>Metti in contatto persone anziane e studenti.</small></span><b aria-hidden="true">›</b></a>
-      </div>
-    </div>
-    <div class="stats-strip">
-      <div class="stat"><span class="stat-icon">▤</span><div><strong>Informazioni complete</strong><span>Non soltanto fotografie</span></div></div>
-      <div class="stat"><span class="stat-icon">⌖</span><div><strong>Città universitarie</strong><span>31 città e poli italiani navigabili</span></div></div>
-      <div class="stat"><span class="stat-icon">◇</span><div><strong>Costi confrontabili</strong><span>Spese e commissioni dichiarate</span></div></div>
-      <div class="stat"><span class="stat-icon">◎</span><div><strong>Mobilità europea</strong><span>Università, Erasmus e tirocini</span></div></div>
-    </div>
-  </section>
-
-  <section class="city-section" id="faq">
-    <div class="container">
-      <span class="kicker">La nostra identità è nel prodotto</span>
-      <h2 class="section-title" style="margin-top:8px">Confronta stanze e appartamenti senza sorprese</h2>
-      <div class="detail-grid">
-        <article class="info-card"><h2>Che cosa confronta?</h2><p>Canone, spese, utenze, deposito, durata minima, preavviso, costi di agenzia, servizi e distanze dalle università.</p></article>
-        <article class="info-card"><h2>Chi può pubblicare?</h2><p>Privati, agenzie, residence e operatori specializzati, con indicazione chiara di eventuali costi d’intermediazione.</p></article>
-        <article class="info-card"><h2>Dove è disponibile?</h2><p>I menu comprendono 31 città e poli universitari italiani. La cartina rende cliccabili le 14 città rappresentate graficamente; il lancio operativo parte da Padova.</p></article>
-      </div>
-    </div>
-  </section>
+<section class="home-hero"><div class="container hero-grid"><div class="hero-copy"><h1>Trova la tua<br>stanza nella tua<br><span>città universitaria</span></h1><p>La bacheca dedicata a studenti e proprietari. Semplice, trasparente e gratuita.</p><form class="search-card" id="home-search"><h2>Dove studi?</h2><p>Seleziona la città e il tipo di alloggio.</p><div class="field"><label for="home-city">Città universitaria</label><select id="home-city" name="city"><option value="padova">Padova</option></select></div><div class="field"><label for="home-type">Cosa cerchi?</label><select id="home-type" name="type"><option value="">Tutte le tipologie</option><option value="Stanza singola">Stanza singola</option><option value="Posto letto in doppia">Posto letto in doppia</option><option value="Bilocale">Bilocale</option><option value="Appartamento">Appartamento</option></select></div><button class="btn btn-yellow btn-block" type="submit">Cerca annunci</button></form><div class="hero-market-actions" aria-label="Altre azioni principali"><a href="cerco.html"><strong>Cerco casa</strong><small>Pubblica la tua richiesta</small></a><a href="pubblica.html"><strong>Offro un alloggio</strong><small>Trova uno studente</small></a></div><div class="explore-map"><span class="explore-arrow">↗</span><span>Oppure esplora la mappa</span></div></div><div class="map-stage blended-map" aria-label="Mappa illustrata delle città universitarie italiane"><img src="assets/img/italia-proposta1.webp" alt="Mappa illustrata dell'Italia con città universitarie e monumenti"><a class="map-hotspot hot-padova" href="/padova/" aria-label="Apri gli annunci di Padova"></a><a class="map-hotspot hot-bologna" href="/bologna/" aria-label="Apri gli annunci di Bologna"></a><a class="map-hotspot hot-roma" href="padova.html?city=roma" aria-label="Apri gli annunci di Roma"></a><a class="map-hotspot hot-milano" href="/milano/" aria-label="Apri gli annunci di Milano"></a><a class="map-hotspot hot-torino" href="padova.html?city=torino" aria-label="Apri gli annunci di Torino"></a><a class="map-hotspot hot-firenze" href="padova.html?city=firenze" aria-label="Apri gli annunci di Firenze"></a><a class="map-hotspot hot-napoli" href="padova.html?city=napoli" aria-label="Apri gli annunci di Napoli"></a><a class="map-hotspot hot-palermo" href="padova.html?city=palermo" aria-label="Apri gli annunci di Palermo"></a><a class="map-hotspot hot-trento" href="padova.html?city=trento" aria-label="Apri gli annunci di Trento"></a><a class="map-hotspot hot-trieste" href="padova.html?city=trieste" aria-label="Apri gli annunci di Trieste"></a><a class="map-hotspot hot-pisa" href="padova.html?city=pisa" aria-label="Apri gli annunci di Pisa"></a><a class="map-hotspot hot-ancona" href="padova.html?city=ancona" aria-label="Apri gli annunci di Ancona"></a><a class="map-hotspot hot-bari" href="padova.html?city=bari" aria-label="Apri gli annunci di Bari"></a><a class="map-hotspot hot-cagliari" href="padova.html?city=cagliari" aria-label="Apri gli annunci di Cagliari"></a></div></div><div class="container value-strip" id="come-funziona"><div class="value-item"><span class="icon-circle">🎓</span><div><h3>Per studenti</h3><p>Trova un’offerta oppure <a href="cerco.html" style="text-decoration:underline">pubblica ciò che cerchi</a>.</p></div></div><div class="value-item"><span class="icon-circle">⌂</span><div><h3>Per proprietari</h3><p>Pubblica l’alloggio o consulta gli <a href="studenti.html" style="text-decoration:underline">studenti interessati</a>.</p></div></div><div class="value-item"><span class="icon-circle">♡</span><div><h3>Confronto trasparente</h3><p>Canone, spese, deposito, durata e preavviso.</p></div></div></div></section>
+<section class="solidarity-home" id="casa-solidale"><div class="container solidarity-home-grid"><div class="solidarity-visual" aria-hidden="true"><span>👵</span><b>+</b><span>🎓</span></div><div><span class="kicker">Ospitalità solidale tra generazioni</span><h2>Una stanza, una presenza in più</h2><p>Una persona anziana può offrire una stanza a prezzo agevolato a uno studente o una studentessa, ricevendo in cambio compagnia e un piccolo aiuto concordato nella vita quotidiana.</p><div class="solidarity-points"><span>✓ Canone agevolato</span><span>✓ Patti chiari</span><span>✓ Nessuna assistenza sanitaria</span></div></div><div class="solidarity-actions"><a class="btn btn-dark" href="intergenerazionale.html">Scopri come funziona</a><a class="btn btn-white" href="pubblica.html?formula=intergenerazionale">Offro una stanza</a></div></div></section>
+<section class="city-section" id="citta"><div class="container"><h2 class="section-title">Le città più cercate</h2><div class="city-grid"><a class="city-card" href="/padova/"><img src="assets/img/citta-padova.webp" alt="Padova"><strong>Padova</strong></a><a class="city-card" href="/bologna/"><img src="assets/img/citta-bologna.webp" alt="Bologna"><strong>Bologna</strong></a><a class="city-card" href="/milano/"><img src="assets/img/citta-milano.webp" alt="Milano"><strong>Milano</strong></a><a class="city-card" href="padova.html?city=roma"><img src="assets/img/citta-roma.webp" alt="Roma"><strong>Roma</strong></a><a class="city-card" href="padova.html?city=torino"><img src="assets/img/citta-torino.webp" alt="Torino"><strong>Torino</strong></a><a class="city-card" href="padova.html?city=firenze"><img src="assets/img/citta-firenze.webp" alt="Firenze"><strong>Firenze</strong></a><a class="city-card" href="padova.html?city=pisa"><img src="assets/img/citta-pisa.webp" alt="Pisa"><strong>Pisa</strong></a><a class="city-card" href="padova.html?city=napoli"><img src="assets/img/citta-napoli.webp" alt="Napoli"><strong>Napoli</strong></a></div></div></section>
+<section class="container" id="chi-siamo"><div class="publish-banner"><div class="student-illustration" aria-hidden="true">🧑‍🎓</div><div><h3>Pubblica gratis</h3><p>Scegli il percorso più adatto alla tua situazione.</p></div><div class="publish-choice-grid" aria-label="Scegli il tipo di pubblicazione"><a class="publish-choice" href="cerco.html"><span class="choice-icon" aria-hidden="true">🏠</span><span><strong>Cerco casa</strong><small>Pubblica il tuo profilo e descrivi l’alloggio che cerchi.</small></span><b aria-hidden="true">›</b></a><a class="publish-choice" href="pubblica.html"><span class="choice-icon" aria-hidden="true">🔑</span><span><strong>Offro un alloggio</strong><small>Pubblica una stanza, un posto letto o un appartamento.</small></span><b aria-hidden="true">›</b></a><a class="publish-choice solidarity-choice" href="intergenerazionale.html"><span class="choice-icon" aria-hidden="true">🤝</span><span><strong>Ospitalità solidale</strong><small>Metti in contatto persone anziane e studenti.</small></span><b aria-hidden="true">›</b></a></div></div><div class="stats-strip"><div class="stat"><span class="stat-icon">▤</span><div><strong>Informazioni complete</strong><span>Non soltanto fotografie</span></div></div><div class="stat"><span class="stat-icon">⌖</span><div><strong>Città universitarie</strong><span>31 città e poli italiani navigabili</span></div></div><div class="stat"><span class="stat-icon">◇</span><div><strong>Costi confrontabili</strong><span>Spese e commissioni dichiarate</span></div></div><div class="stat"><span class="stat-icon">◎</span><div><strong>Mobilità europea</strong><span>Università, Erasmus e tirocini</span></div></div></div></section>
+<section class="city-section" id="faq"><div class="container"><span class="kicker">La nostra identità è nel prodotto</span><h2 class="section-title" style="margin-top:8px">Confronta stanze e appartamenti senza sorprese</h2><div class="detail-grid"><article class="info-card"><h2>Che cosa confronta?</h2><p>Canone, spese, utenze, deposito, durata minima, preavviso, costi di agenzia, servizi e distanze dalle università.</p></article><article class="info-card"><h2>Chi può pubblicare?</h2><p>Privati, agenzie, residence e operatori specializzati, con indicazione chiara di eventuali costi d’intermediazione.</p></article><article class="info-card"><h2>Dove è disponibile?</h2><p>I menu comprendono 31 città e poli universitari italiani. La cartina rende cliccabili le 14 città rappresentate graficamente; il lancio operativo parte da Padova.</p></article></div></div></section>
 </main>
-
-<footer class="site-footer" id="contatti">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <a class="brand" href="index.html" style="font-size:27px"><span>Casa<strong>Student</strong></span></a>
-        <p>La piattaforma dedicata alla mobilità abitativa degli studenti: costi, condizioni e servizi confrontabili con chiarezza.</p>
-      </div>
-      <div><h3>Esplora</h3><div class="footer-links"><a href="/padova/">Alloggi a Padova</a><a href="studenti.html">Studenti in cerca</a><a href="cerco.html">Cerco alloggio</a><a href="intergenerazionale.html">Ospitalità solidale</a><a href="pubblica.html">Pubblica annuncio</a></div></div>
-      <div><h3>Progetto</h3><div class="footer-links"><a href="index.html#come-funziona">Come funziona</a><a href="index.html#chi-siamo">Chi siamo</a><a href="index.html#faq">Domande frequenti</a></div></div>
-      <div><h3>Sicurezza</h3><div class="footer-links"><a href="privacy.html">Privacy e condizioni</a><a href="privacy.html#sicurezza">Prevenzione truffe</a><a href="mailto:segnalazioni@studentbnb.it">Segnala un annuncio</a></div></div>
-    </div>
-    <div class="footer-international"><strong>CasaStudent in Europa</strong><div class="footer-country-links" data-network><a href="index.html" aria-current="page"><img class="network-flag" src="assets/img/flag-it.svg" alt="" width="30" height="20"><span>Italia</span><span class="network-open" aria-hidden="true">↗</span></a><a href="https://studentbnb.es/" target="_blank" rel="noopener"><img class="network-flag" src="assets/img/flag-es.svg" alt="" width="30" height="20"><span>España</span><span class="network-open" aria-hidden="true">↗</span></a><a href="https://studentbnb.fr/" target="_blank" rel="noopener"><img class="network-flag" src="assets/img/flag-fr.svg" alt="" width="30" height="20"><span>France</span><span class="network-open" aria-hidden="true">↗</span></a><a href="https://student-bnb.de/" target="_blank" rel="noopener"><img class="network-flag" src="assets/img/flag-de.svg" alt="" width="30" height="20"><span>Deutschland</span><span class="network-open" aria-hidden="true">↗</span></a><a href="https://studentbnb.pl/" target="_blank" rel="noopener"><img class="network-flag" src="assets/img/flag-pl.svg" alt="" width="30" height="20"><span>Polska</span><span class="network-open" aria-hidden="true">↗</span></a></div></div>
-    <div class="footer-bottom"><span>© 2026 CasaStudent</span><span>Padova, Italia</span></div>
-  </div>
-</footer>
-<div class="modal-backdrop" id="login-modal" role="dialog" aria-modal="true" aria-labelledby="login-title">
-  <div class="modal">
-    <button class="modal-close" data-close-modal aria-label="Chiudi">×</button>
-    <h2 id="login-title">Accedi a CasaStudent</h2>
-    <p>Salva ricerche e preferiti e utilizza i contatti protetti.</p>
-    <form id="login-form">
-      <div class="field"><label for="login-email">Email</label><input id="login-email" name="email" type="email" required placeholder="nome@email.it"></div>
-      <button class="btn btn-yellow btn-block" type="submit">Continua</button>
-    </form>
-  </div>
-</div>
-<div id="toast" class="toast" role="status" aria-live="polite"></div>
-<script src="assets/js/city-visuals.js?v=20260831-seo-routes" data-city-visuals></script>
-<script src="assets/js/config.js?v=20260831-seo-security"></script><script src="assets/js/data.js"></script>
-<script src="assets/js/app.js?v=20260831-seo-routes"></script>
-<script src="assets/js/studentbnb-brand.js?v=5"></script></body>
-</html>
+<footer class="site-footer" id="contatti"><div class="container"><div class="footer-grid"><div><a class="brand" href="index.html" style="font-size:27px"><span>Student<strong>BnB</strong></span></a><p>La piattaforma dedicata alla mobilità abitativa degli studenti: costi, condizioni e servizi confrontabili con chiarezza.</p></div><div><h3>Esplora</h3><div class="footer-links"><a href="/padova/">Alloggi a Padova</a><a href="studenti.html">Studenti in cerca</a><a href="cerco.html">Cerco alloggio</a><a href="intergenerazionale.html">Ospitalità solidale</a><a href="pubblica.html">Pubblica annuncio</a></div></div><div><h3>Progetto</h3><div class="footer-links"><a href="index.html#come-funziona">Come funziona</a><a href="index.html#chi-siamo">Chi siamo</a><a href="index.html#faq">Domande frequenti</a></div></div><div><h3>Sicurezza</h3><div class="footer-links"><a href="privacy.html">Privacy e condizioni</a><a href="privacy.html#sicurezza">Prevenzione truffe</a><a href="mailto:segnalazioni@studentbnb.it">Segnala un annuncio</a></div></div></div><div class="footer-international"><strong>StudentBnB in Europa</strong><div class="footer-country-links" data-network><a href="index.html" aria-current="page"><img class="network-flag" src="assets/img/flag-it.svg" alt="" width="30" height="20"><span>Italia</span><span class="network-open" aria-hidden="true">↗</span></a><a href="https://studentbnb.es/" target="_blank" rel="noopener"><img class="network-flag" src="assets/img/flag-es.svg" alt="" width="30" height="20"><span>España</span><span class="network-open" aria-hidden="true">↗</span></a><a href="https://studentbnb.fr/" target="_blank" rel="noopener"><img class="network-flag" src="assets/img/flag-fr.svg" alt="" width="30" height="20"><span>France</span><span class="network-open" aria-hidden="true">↗</span></a><a href="https://student-bnb.de/" target="_blank" rel="noopener"><img class="network-flag" src="assets/img/flag-de.svg" alt="" width="30" height="20"><span>Deutschland</span><span class="network-open" aria-hidden="true">↗</span></a><a href="https://studentbnb.pl/" target="_blank" rel="noopener"><img class="network-flag" src="assets/img/flag-pl.svg" alt="" width="30" height="20"><span>Polska</span><span class="network-open" aria-hidden="true">↗</span></a></div></div><div class="footer-bottom"><span>© 2026 StudentBnB</span><span>Padova, Italia</span></div></div></footer>
+<div class="modal-backdrop" id="login-modal" role="dialog" aria-modal="true" aria-labelledby="login-title"><div class="modal"><button class="modal-close" data-close-modal aria-label="Chiudi">×</button><h2 id="login-title">Accedi a StudentBnB</h2><p>Salva ricerche e preferiti e utilizza i contatti protetti.</p><form id="login-form"><div class="field"><label for="login-email">Email</label><input id="login-email" name="email" type="email" required placeholder="nome@email.it"></div><button class="btn btn-yellow btn-block" type="submit">Continua</button></form></div></div><div id="toast" class="toast" role="status" aria-live="polite"></div><script src="assets/js/city-visuals.js?v=20260831-seo-routes" data-city-visuals></script><script src="assets/js/config.js?v=20260831-seo-security"></script><script src="assets/js/data.js"></script><script src="assets/js/app.js?v=20260831-seo-routes"></script><script src="assets/js/studentbnb-brand.js?v=5"></script></body></html>
