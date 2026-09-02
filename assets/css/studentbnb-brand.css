@@ -1,6 +1,7 @@
 :root{--yellow:#0F766E;--yellow-dark:#115E59;--yellow-soft:#CCFBF1}
 .site-header{background:#0F766E;color:#fff}
 .site-header .brand,.site-header .main-nav a,.site-header .account-link{color:#fff}
+.site-header .main-nav .header-cta{color:var(--ink)}
 .site-header .brand strong{color:#99F6E4;text-shadow:none}
 .site-header .brand small{color:#D8F3EF;font-style:italic}
 .site-header .brand>span:last-child::after{content:'temporary student stays';display:block;font-size:10px;font-weight:700;font-style:normal;letter-spacing:.08em;text-transform:uppercase;color:#CCFBF1;margin-top:2px}
