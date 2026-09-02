@@ -10,8 +10,8 @@
   cleanUrl.searchParams.delete("city");
   const runtimeUrl = new URL(location.href);
 
-  /* The route path is authoritative. Never allow ?city= to make /bologna/
-     render Milano (or any other mismatched city). */
+  /* The route path is authoritative. Never allow ?city= to make a clean
+     city route render another city. */
   runtimeUrl.searchParams.set("city", slug);
 
   if (runtimeUrl.href !== location.href) history.replaceState(history.state, "", runtimeUrl.href);
@@ -22,7 +22,7 @@
     const description = document.head.querySelector('meta[name="description"]');
     if (description && originalDescription) description.content = originalDescription;
 
-    const canonical = `https://casastudent.it/${encodeURIComponent(slug)}/`;
+    const canonical = `https://studentbnb.it/${encodeURIComponent(slug)}/`;
     let link = document.head.querySelector('link[rel="canonical"]');
     if (!link) {
       link = document.createElement("link");
