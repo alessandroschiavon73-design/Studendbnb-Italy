@@ -1,16 +1,42 @@
 @import url("style.css");
 
-/* City pages aligned with the Spain portal.
-   Keep the city photo integrated in the hero instead of rendering it as a
-   separate oversized block on tablet/mobile. */
-@media (min-width: 591px){
+/* City pages: use the city photograph as the real hero.
+   This intentionally overrides the legacy CasaStudent yellow hero inherited
+   from style.css, including the mobile yellow wash. */
+.city-hero{
+  background:#111;
+}
+.city-hero-bg{
+  inset:0;
+  opacity:1;
+  background-size:cover;
+  background-position:center;
+}
+.city-hero-bg:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  display:block;
+  background:linear-gradient(90deg,rgba(0,0,0,.66) 0%,rgba(0,0,0,.40) 38%,rgba(0,0,0,.08) 72%,rgba(0,0,0,0) 100%);
+}
+.city-hero .container{
+  color:#fff;
+}
+.city-hero h1,
+.city-hero h2,
+.city-hero p{
+  color:#fff;
+  text-shadow:0 2px 12px rgba(0,0,0,.38);
+}
+
+@media (max-width:590px){
   .city-hero-bg{
-    inset:0 0 0 38%;
-    background-size:cover;
-    background-position:center;
+    inset:0;
+    opacity:1;
+    background-position:62% center;
   }
   .city-hero-bg:before{
-    background:linear-gradient(90deg,#fff3c4 0%,rgba(255,243,196,.9) 10%,rgba(255,243,196,0) 56%);
+    background:linear-gradient(90deg,rgba(0,0,0,.70) 0%,rgba(0,0,0,.48) 58%,rgba(0,0,0,.18) 100%);
   }
 }
 
