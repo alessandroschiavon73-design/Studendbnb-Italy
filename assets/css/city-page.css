@@ -13,3 +13,19 @@
     background:linear-gradient(90deg,#fff3c4 0%,rgba(255,243,196,.9) 10%,rgba(255,243,196,0) 56%);
   }
 }
+
+/* Real photography for the 14 cities shown on the Italian map. */
+body[data-city-slug="ancona"] .city-hero-bg{background-image:url('../img/citta-ancona-hero.webp')!important}
+body[data-city-slug="bari"] .city-hero-bg{background-image:url('../img/citta-bari-hero.webp')!important}
+body[data-city-slug="bologna"] .city-hero-bg{background-image:url('../img/citta-bologna.webp')!important}
+body[data-city-slug="cagliari"] .city-hero-bg{background-image:url('../img/citta-cagliari-hero.webp')!important}
+body[data-city-slug="firenze"] .city-hero-bg{background-image:url('../img/citta-firenze.webp')!important}
+body[data-city-slug="milano"] .city-hero-bg{background-image:url('../img/citta-milano.webp')!important}
+body[data-city-slug="napoli"] .city-hero-bg{background-image:url('../img/citta-napoli.webp')!important}
+body[data-city-slug="padova"] .city-hero-bg{background-image:url('../img/padova-hero.webp')!important}
+body[data-city-slug="palermo"] .city-hero-bg{background-image:url('../img/citta-palermo-hero.webp')!important}
+body[data-city-slug="pisa"] .city-hero-bg{background-image:url('../img/citta-pisa.webp')!important}
+body[data-city-slug="roma"] .city-hero-bg{background-image:url('../img/citta-roma.webp')!important}
+body[data-city-slug="torino"] .city-hero-bg{background-image:url('../img/citta-torino.webp')!important}
+body[data-city-slug="trento"] .city-hero-bg{background-image:url('../img/citta-trento-hero.webp')!important}
+body[data-city-slug="trieste"] .city-hero-bg{background-image:url('../img/citta-trieste-hero.webp')!important}
