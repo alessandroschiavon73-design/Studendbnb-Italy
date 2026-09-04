@@ -14,7 +14,9 @@
   }
 }
 
-/* Real photography for the 14 cities shown on the Italian map. */
+/* Clean fallback for every city, then real photography for the 14 cities
+   shown on the Italian map. */
+body[data-city-slug] .city-hero-bg{background-image:url('../img/camera.webp')!important}
 body[data-city-slug="ancona"] .city-hero-bg{background-image:url('../img/citta-ancona-hero.webp')!important}
 body[data-city-slug="bari"] .city-hero-bg{background-image:url('../img/citta-bari-hero.webp')!important}
 body[data-city-slug="bologna"] .city-hero-bg{background-image:url('../img/citta-bologna.webp')!important}
