@@ -13,6 +13,21 @@
 .site-footer{background:#0F766E!important;color:#fff!important;border-top-color:rgba(255,255,255,.18)!important}.site-footer .brand,.site-footer h2,.site-footer h3,.site-footer strong{color:#fff!important}.site-footer .brand strong{color:#99F6E4!important}.site-footer p,.site-footer a,.site-footer .footer-links a{color:#D8F3EF!important}.site-footer .footer-grid,.site-footer .footer-international,.site-footer .footer-bottom{border-color:rgba(255,255,255,.16)!important}.site-footer .footer-country-links a{background:rgba(255,255,255,.06)!important;border-color:rgba(255,255,255,.24)!important;color:#fff!important}.site-footer .footer-country-links a:hover,.site-footer .footer-country-links a[aria-current="page"]{border-color:#99F6E4!important;box-shadow:0 0 0 1px #99F6E4 inset}.site-footer .network-open{color:#99F6E4!important}
 @media(max-width:700px){.site-header .brand{font-size:28px;line-height:1.05}.site-header .brand small{font-size:11px;margin-top:3px}.site-header .brand>span:last-child::after{font-size:9px;margin-top:3px}.header-inner{height:auto;min-height:82px;padding:10px 0}.brand-icon{width:46px;height:46px;flex:0 0 46px}.studentbnb-duration-options{gap:7px;font-size:12px}.studentbnb-duration-options strong{padding:6px 9px}.city-hero-bg{opacity:1!important;background-position:center center!important}.city-hero-bg:before{display:none!important}.city-hero:after{background:linear-gradient(180deg,rgba(12,18,25,.06) 24%,rgba(12,18,25,.76) 100%)!important}}
 
+/* Dedicated Italian city photography on clean /city/ routes. */
+body[data-city-slug="ancona"] .city-hero-bg{background-image:url('../img/citta-ancona-hero.webp')!important}
+body[data-city-slug="bari"] .city-hero-bg{background-image:url('../img/citta-bari-hero.webp')!important}
+body[data-city-slug="bologna"] .city-hero-bg{background-image:url('../img/citta-bologna.webp')!important}
+body[data-city-slug="cagliari"] .city-hero-bg{background-image:url('../img/citta-cagliari-hero.webp')!important}
+body[data-city-slug="firenze"] .city-hero-bg{background-image:url('../img/citta-firenze.webp')!important}
+body[data-city-slug="milano"] .city-hero-bg{background-image:url('../img/citta-milano.webp')!important}
+body[data-city-slug="napoli"] .city-hero-bg{background-image:url('../img/citta-napoli.webp')!important}
+body[data-city-slug="padova"] .city-hero-bg{background-image:url('../img/padova-hero.webp')!important}
+body[data-city-slug="palermo"] .city-hero-bg{background-image:url('../img/citta-palermo-hero.webp')!important}
+body[data-city-slug="pisa"] .city-hero-bg{background-image:url('../img/citta-pisa.webp')!important}
+body[data-city-slug="roma"] .city-hero-bg{background-image:url('../img/citta-roma.webp')!important}
+body[data-city-slug="torino"] .city-hero-bg{background-image:url('../img/citta-torino.webp')!important}
+body[data-city-slug="trento"] .city-hero-bg{background-image:url('../img/citta-trento-hero.webp')!important}
+body[data-city-slug="trieste"] .city-hero-bg{background-image:url('../img/citta-trieste-hero.webp')!important}
 
 /* StudentBnB test-stay price ladder */
 .test-price-breakdown{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:4px 9px;margin-top:4px;font-size:12px;font-weight:800;line-height:1.3;color:#40505a}
