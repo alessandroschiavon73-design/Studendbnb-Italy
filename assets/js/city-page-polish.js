@@ -17,6 +17,7 @@
     trento: "assets/img/citta-trento-hero.webp",
     trieste: "assets/img/citta-trieste-hero.webp"
   });
+  const neutralHousingPhoto = "assets/img/camera.webp";
 
   function currentCitySlug() {
     const bodySlug = document.body?.dataset?.citySlug;
@@ -24,14 +25,14 @@
     const querySlug = new URLSearchParams(location.search).get("city");
     if (querySlug) return querySlug.toLowerCase();
     const pathSlug = location.pathname.split("/").filter(Boolean)[0];
-    return pathSlug && cityPhotos[pathSlug] ? pathSlug : "padova";
+    return pathSlug || "padova";
   }
 
   function applyCityPhoto() {
     const slug = currentCitySlug();
     const hero = document.querySelector(".city-hero-bg");
-    const photo = cityPhotos[slug];
-    if (!hero || !photo) return;
+    if (!hero) return;
+    const photo = cityPhotos[slug] || neutralHousingPhoto;
     hero.style.backgroundImage = `url("${photo}")`;
     hero.style.backgroundPosition = "center";
   }
