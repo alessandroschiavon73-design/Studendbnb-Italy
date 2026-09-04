@@ -9,7 +9,7 @@
     firenze: "assets/img/citta-firenze.webp",
     milano: "assets/img/citta-milano.webp",
     napoli: "assets/img/citta-napoli.webp",
-    padova: "assets/img/padova-hero.webp",
+    padova: "assets/img/padova-hero-v2.webp",
     palermo: "assets/img/citta-palermo-hero.webp",
     pisa: "assets/img/citta-pisa.webp",
     roma: "assets/img/citta-roma.webp",
