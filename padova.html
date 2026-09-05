@@ -3,12 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Padova | StudentBnB</title>
-<link rel="canonical" href="https://studentbnb.it/padova/">
-<meta http-equiv="refresh" content="0; url=/padova/">
-<script>location.replace('/padova/');</script>
+<title>StudentBnB | Reindirizzamento città</title>
+<meta name="robots" content="noindex,follow">
+<script>
+(function(){
+  const allowed = new Set([
+    'padova','ancona','bari','bergamo','bologna','cagliari','caserta','catania','chieti','cosenza-rende','ferrara','firenze','genova','messina','milano','modena','napoli','palermo','parma','pavia','perugia','pescara','pisa','reggio-emilia','roma','salerno-fisciano','torino','trento','trieste','venezia','verona'
+  ]);
+  const params = new URLSearchParams(location.search);
+  const requested = String(params.get('city') || 'padova').toLowerCase().trim();
+  const city = allowed.has(requested) ? requested : 'padova';
+  const type = params.get('type');
+  const target = new URL('/' + city + '/', location.origin);
+  if(type) target.searchParams.set('type', type);
+  location.replace(target.pathname + target.search);
+})();
+</script>
 </head>
 <body>
-<p>Reindirizzamento a <a href="/padova/">StudentBnB Padova</a>…</p>
+<p>Reindirizzamento alla città selezionata…</p>
 </body>
 </html>
