@@ -8,44 +8,25 @@
 <title>Soggiorni StudentBnB a Padova | 1 settimana, 2 settimane o 1 mese</title>
 <meta name="description" content="Prova una stanza o un appartamento a Padova per una settimana, due settimane o un mese, conosci casa e coinquilini e poi decidi se continuare.">
 <link rel="canonical" href="https://studentbnb.it/padova/">
-<link rel="stylesheet" href="assets/css/city-page.css?v=20260905-padova-v8">
-<link rel="stylesheet" href="assets/css/studentbnb-brand.css?v=20260905-padova-v8">
+<link rel="stylesheet" href="assets/css/city-page.css?v=20260905-padova-v9">
+<link rel="stylesheet" href="assets/css/studentbnb-brand.css?v=20260905-padova-v9">
 <style>
-body[data-city-slug="padova"] .city-hero{
-  position:relative!important;
-  overflow:hidden!important;
-  background-image:url('/padova-hero.webp?v=20260905-v8')!important;
-  background-size:cover!important;
-  background-repeat:no-repeat!important;
-  background-position:center center!important;
-  background-color:#222!important;
-}
+body[data-city-slug="padova"] .city-hero{position:relative!important;overflow:hidden!important;background:#222!important}
+body[data-city-slug="padova"] .padova-hero-img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;display:block!important;z-index:0!important}
 body[data-city-slug="padova"] .city-hero-bg,
 body[data-city-slug="padova"] .padova-hero-photo{display:none!important}
 body[data-city-slug="padova"] .city-hero:before,
 body[data-city-slug="padova"] .city-hero:after,
 body[data-city-slug="padova"] .city-hero-bg:before,
 body[data-city-slug="padova"] .city-hero-bg:after{content:none!important;display:none!important}
-body[data-city-slug="padova"] .padova-hero-shade{
-  position:absolute!important;
-  inset:0!important;
-  z-index:1!important;
-  background:linear-gradient(90deg,rgba(0,0,0,.46) 0%,rgba(0,0,0,.24) 52%,rgba(0,0,0,.06) 100%)!important;
-  pointer-events:none!important
-}
+body[data-city-slug="padova"] .padova-hero-shade{position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(0,0,0,.38) 0%,rgba(0,0,0,.16) 55%,rgba(0,0,0,.03) 100%)!important;pointer-events:none!important}
 body[data-city-slug="padova"] .city-hero>.container{position:relative!important;z-index:2!important;color:#fff!important}
 body[data-city-slug="padova"] .city-hero h1,
 body[data-city-slug="padova"] .city-hero h2,
 body[data-city-slug="padova"] .city-hero p{color:#fff!important;text-shadow:0 2px 12px rgba(0,0,0,.45)!important}
 @media(max-width:700px){
-  body[data-city-slug="padova"] .city-hero{
-    background-image:url('/padova-hero.webp?v=20260905-v8')!important;
-    background-size:cover!important;
-    background-position:center center!important;
-  }
-  body[data-city-slug="padova"] .padova-hero-shade{
-    background:linear-gradient(180deg,rgba(0,0,0,.08) 0%,rgba(0,0,0,.48) 100%)!important
-  }
+ body[data-city-slug="padova"] .padova-hero-img{object-position:center 45%!important}
+ body[data-city-slug="padova"] .padova-hero-shade{background:linear-gradient(180deg,rgba(0,0,0,.04) 0%,rgba(0,0,0,.42) 100%)!important}
 }
 </style>
 </head>
@@ -53,7 +34,7 @@ body[data-city-slug="padova"] .city-hero p{color:#fff!important;text-shadow:0 2p
 <header class="site-header"><div class="container header-inner"><a class="brand" href="/" aria-label="StudentBnB home"><span class="brand-icon" aria-hidden="true"><span class="brand-cap">▰</span></span><span>Student<strong>BnB</strong><small>Prova prima di scegliere</small></span></a><button class="menu-button" aria-label="Apri il menu" aria-expanded="false">☰</button><nav class="main-nav" aria-label="Navigazione principale"><a href="/#come-funziona">Come funziona</a><a href="studenti.html">Studenti in cerca</a><a class="nav-social-link" href="intergenerazionale.html">Casa solidale</a><a class="nav-feature-link" href="cerco.html">Cerco alloggio</a><a class="header-cta" href="pubblica.html">Pubblica annuncio gratis</a><a class="account-link" href="#" data-login>♙ <span data-account-label>Accedi</span></a></nav></div></header>
 <div class="breadcrumb"><div class="container"><a href="/">Home</a><span>›</span><strong id="city-breadcrumb">Padova</strong></div></div>
 <main>
-<section class="city-hero"><div class="padova-hero-shade" aria-hidden="true"></div><div class="container"><h1 id="city-name">Padova</h1><h2 id="city-count">Caricamento annunci…</h2><p id="city-description">Una settimana, due settimane o un mese per conoscere casa, quartiere e coinquilini a Padova prima di decidere se restare più a lungo.</p><a class="btn btn-yellow" href="/">← Torna alla mappa</a></div></section>
+<section class="city-hero"><img class="padova-hero-img" src="/citta-padova.webp?v=20260905-v9" alt="Prato della Valle, Padova" onerror="this.onerror=null;this.src='/padova-hero.webp?v=20260905-v9';"><div class="padova-hero-shade" aria-hidden="true"></div><div class="container"><h1 id="city-name">Padova</h1><h2 id="city-count">Caricamento annunci…</h2><p id="city-description">Una settimana, due settimane o un mese per conoscere casa, quartiere e coinquilini a Padova prima di decidere se restare più a lungo.</p><a class="btn btn-yellow" href="/">← Torna alla mappa</a></div></section>
 <section class="filters" aria-label="Filtri degli annunci"><div class="container filter-grid city-filter-grid"><label>Zona<select id="filter-zone"><option value="">Tutte le zone</option></select></label><label>Tipologia<select id="filter-type"><option value="">Tutte le tipologie</option><option>Stanza singola</option><option>Posto letto in doppia</option><option>Bilocale</option><option>Appartamento (3 camere)</option></select></label><label>Prezzo massimo<select id="filter-price"><option value="">Qualsiasi</option><option value="350">€ 350</option><option value="450">€ 450</option><option value="700">€ 700</option><option value="1000">€ 1.000</option></select></label><label>Spese<select id="filter-expenses"><option value="">Tutte</option><option value="included">Incluse</option><option value="excluded">Escluse</option></select></label><label>Formula<select id="filter-arrangement"><option value="">Tutte</option><option value="standard">Standard</option><option value="intergenerational">Ospitalità solidale</option></select></label><label>Disponibile entro<input id="filter-available" type="date"></label><label>Ordina per<select id="filter-sort"><option value="recent">Più recenti</option><option value="price-asc">Prezzo crescente</option><option value="price-desc">Prezzo decrescente</option><option value="zone">Zona</option></select></label></div></section>
 <section class="container"><div class="results-bar"><strong id="result-count">Caricamento offerte…</strong><div class="results-actions"><button type="button" class="btn btn-white" data-save-alert>🔔 Avvisami</button><a href="studenti.html" class="btn btn-white">Studenti in cerca</a><a href="cerco.html?city=padova" class="btn btn-yellow">+ Cerco alloggio</a></div></div><div id="listing-results" class="listings" aria-live="polite"></div><div class="tip-strip"><span class="icon-circle">💡</span><div><strong>Prova Padova prima di scegliere</strong><br><span>Confronta le offerte e usa il soggiorno breve per capire se zona, casa e convivenza fanno davvero per te.</span></div></div></section>
 </main>
