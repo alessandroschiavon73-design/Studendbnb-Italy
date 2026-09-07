@@ -16,7 +16,7 @@
     pisa:'assets/img/pisa-piazza-dei-miracoli.webp',
     palermo:'https://images.unsplash.com/photo-1774244764179-f34b65061ec6?auto=format&fit=crop&fm=webp&q=82&w=2400',
     bari:'https://images.unsplash.com/photo-1564863756233-e90e6d2f264b?auto=format&fit=crop&fm=webp&q=82&w=2400',
-    cagliari:'assets/img/citta-cagliari-hero.webp'
+    cagliari:'assets/img/cagliari-panorama.webp'
   };
 
   window.STUDENTBNB_CITY_HERO={padova:hdCityImages.padova,bologna:hdCityImages.bologna,milano:hdCityImages.milano,roma:hdCityImages.roma,torino:hdCityImages.torino,firenze:hdCityImages.firenze,pisa:hdCityImages.pisa,napoli:hdCityImages.napoli,bari:hdCityImages.bari,palermo:hdCityImages.palermo,cagliari:hdCityImages.cagliari};
