@@ -11,14 +11,15 @@
     napoli:'https://images.unsplash.com/photo-1773600876856-338c2e99cd45?auto=format&fit=crop&fm=webp&q=82&w=2400',
     torino:'https://images.unsplash.com/photo-1770462956276-898ea31652c2?auto=format&fit=crop&fm=webp&q=82&w=2400',
     bologna:'https://images.unsplash.com/photo-1682277303978-7ba42c704590?auto=format&fit=crop&fm=webp&q=82&w=2400',
-    padova:'https://images.unsplash.com/photo-1588447808981-0a8eb9612e49?auto=format&fit=crop&fm=webp&q=82&w=2400',
+    padova:'assets/img/padova-palazzo-ragione.webp',
     firenze:'https://images.unsplash.com/photo-1774116978984-969c27e5f9d9?auto=format&fit=crop&fm=webp&q=82&w=2400',
     pisa:'https://images.unsplash.com/photo-1773467588137-16e619170f1d?auto=format&fit=crop&fm=webp&q=82&w=2400',
     palermo:'https://images.unsplash.com/photo-1774244764179-f34b65061ec6?auto=format&fit=crop&fm=webp&q=82&w=2400',
-    bari:'https://images.unsplash.com/photo-1564863756233-e90e6d2f264b?auto=format&fit=crop&fm=webp&q=82&w=2400'
+    bari:'https://images.unsplash.com/photo-1564863756233-e90e6d2f264b?auto=format&fit=crop&fm=webp&q=82&w=2400',
+    cagliari:'assets/img/citta-cagliari-hero.webp'
   };
 
-  window.STUDENTBNB_CITY_HERO={padova:hdCityImages.padova,bologna:hdCityImages.bologna,milano:hdCityImages.milano,roma:hdCityImages.roma,torino:hdCityImages.torino,firenze:hdCityImages.firenze,pisa:hdCityImages.pisa,napoli:hdCityImages.napoli,bari:hdCityImages.bari,palermo:hdCityImages.palermo};
+  window.STUDENTBNB_CITY_HERO={padova:hdCityImages.padova,bologna:hdCityImages.bologna,milano:hdCityImages.milano,roma:hdCityImages.roma,torino:hdCityImages.torino,firenze:hdCityImages.firenze,pisa:hdCityImages.pisa,napoli:hdCityImages.napoli,bari:hdCityImages.bari,palermo:hdCityImages.palermo,cagliari:hdCityImages.cagliari};
   window.studentBnBCityUrl=slug=>'citta.html?city='+encodeURIComponent(slug||'padova');
 
   function upgradeHomeCityImages(){

@@ -277,7 +277,7 @@
     const citySlug = city.slug;
     const cityName = city.name;
     const cityImageSlugs = new Set(["bologna","firenze","milano","napoli","padova","pisa","roma","torino"]);
-    const heroImage = citySlug === "padova" ? "assets/img/padova-hero.webp" : cityImageSlugs.has(citySlug) ? `assets/img/citta-${citySlug}.webp` : "assets/img/italia-proposta1.webp";
+    const heroImage = window.STUDENTBNB_CITY_HERO?.[citySlug] || (citySlug === "padova" ? "assets/img/padova-palazzo-ragione.webp" : cityImageSlugs.has(citySlug) ? `assets/img/citta-${citySlug}.webp` : "assets/img/italia-proposta1.webp");
     document.title = `Soggiorni StudentBnB a ${cityName} | 1 settimana, 2 settimane o 1 mese`;
     const seoDescription = `Soggiorni test per studenti a ${cityName}: una settimana, due settimane o un mese per conoscere casa, zona e coinquilini prima di scegliere.`;
     const metaDescription = qs('meta[name="description"]');
