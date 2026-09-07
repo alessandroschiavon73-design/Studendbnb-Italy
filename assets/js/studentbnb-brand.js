@@ -80,11 +80,28 @@ document.addEventListener('DOMContentLoaded',()=>{
     if(pageText) pageText.textContent='StudentBnB mette in contatto persone con una stanza libera e studenti interessati a una convivenza temporanea, chiara e rispettosa. Il canone agevolato e l’eventuale piccolo aiuto vengono concordati insieme, con limiti precisi.';
   };
 
+  const setupEuropeanFooter=()=>{
+    const links=[
+      ['it','Italia','index.html'],['es','Spagna','https://studentbnb.es/'],
+      ['fr','Francia','https://studentbnb.fr/'],['de','Germania','https://student-bnb.de/'],
+      ['pl','Polonia','https://studentbnb.pl/'],['pt','Portogallo','https://studentbnb.pt/'],
+      ['eu','Europa','https://studentbnb.eu/']
+    ];
+    document.querySelectorAll('.footer-international').forEach(box=>{
+      box.innerHTML='<strong>StudentBnB in Europa</strong><div class="footer-country-links" data-network>'+links.map(([code,label,href])=>{
+        const current=code==='it'?' aria-current="page"':'';
+        const target=code==='it'?'':' target="_blank" rel="noopener"';
+        return `<a href="${href}"${current}${target}><img class="network-flag" src="assets/img/flag-${code}.svg" alt="" width="30" height="20"><span>${label}</span><span class="network-open" aria-hidden="true">↗</span></a>`;
+      }).join('')+'</div>';
+    });
+  };
+
   replaceText();
   removeHeaderFaqAndContacts();
   adaptRequestPage();
   adaptPublishPage();
   adaptSolidarityPage();
+  setupEuropeanFooter();
 
   document.querySelectorAll('.brand').forEach(b=>{
     const labels=[...b.children].filter(e=>e.tagName==='SPAN'&&!e.classList.contains('brand-icon'));
@@ -111,7 +128,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   c.href=base+(location.pathname==='/'?'':location.pathname.replace(/^\//,''))+location.search;
   const schema=document.querySelector('#studentbnb-website-schema');if(schema)schema.textContent=JSON.stringify({'@context':'https://schema.org','@type':'WebSite',name:'StudentBnB',url:base,inLanguage:'it-IT'});
   const og=document.querySelector('meta[property="og:site_name"]');if(og)og.content='StudentBnB — Base to belong';
-  const intl=document.querySelector('.footer-international > strong');if(intl)intl.textContent='Per soggiorni più lunghi: CasaStudent';
+  const intl=document.querySelector('.footer-international > strong');if(intl&&!intl.textContent.trim())intl.textContent='StudentBnB in Europa';
   const copy=document.querySelector('.footer-bottom span:first-child');if(copy)copy.textContent='© 2026 StudentBnB';
   const login=document.querySelector('#login-title');if(login)login.textContent='Accedi a StudentBnB';
   const f=document.querySelector('.site-footer .container')||document.querySelector('footer');
