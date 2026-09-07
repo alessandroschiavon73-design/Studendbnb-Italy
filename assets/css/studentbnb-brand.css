@@ -16,7 +16,7 @@
 /* Dedicated Italian city photography on clean /city/ routes. */
 body[data-city-slug="ancona"] .city-hero-bg{background-image:url('../img/citta-ancona-hero.webp')!important}
 body[data-city-slug="bari"] .city-hero-bg{background-image:url('../img/citta-bari-hero.webp')!important}
-body[data-city-slug="bologna"] .city-hero-bg{background-image:url('../img/citta-bologna.webp')!important}
+body[data-city-slug="bologna"] .city-hero-bg{background-image:url('../img/bologna-torri.webp')!important}
 body[data-city-slug="cagliari"] .city-hero-bg{background-image:url('../img/citta-cagliari-hero.webp')!important}
 body[data-city-slug="firenze"] .city-hero-bg{background-image:url('../img/firenze-duomo.webp')!important}
 body[data-city-slug="milano"] .city-hero-bg{background-image:url('../img/milano-duomo.webp')!important}

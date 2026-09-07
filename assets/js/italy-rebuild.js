@@ -10,7 +10,7 @@
     roma:'assets/img/roma-colosseo.webp',
     napoli:'https://images.unsplash.com/photo-1773600876856-338c2e99cd45?auto=format&fit=crop&fm=webp&q=82&w=2400',
     torino:'assets/img/torino-mole.webp',
-    bologna:'https://images.unsplash.com/photo-1682277303978-7ba42c704590?auto=format&fit=crop&fm=webp&q=82&w=2400',
+    bologna:'assets/img/bologna-torri.webp',
     padova:'assets/img/padova-palazzo-ragione.webp',
     firenze:'assets/img/firenze-duomo.webp',
     pisa:'assets/img/pisa-piazza-dei-miracoli.webp',

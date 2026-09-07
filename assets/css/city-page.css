@@ -45,7 +45,7 @@
 body[data-city-slug] .city-hero-bg{background-image:url('../img/camera.webp')!important}
 body[data-city-slug="ancona"] .city-hero-bg{background-image:url('../img/citta-ancona-hero.webp')!important}
 body[data-city-slug="bari"] .city-hero-bg{background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Basilica%20Pontificia%20San%20Nicola%20Bari.jpg?width=2000')!important;background-position:center 48%}
-body[data-city-slug="bologna"] .city-hero-bg{background-image:url('../img/citta-bologna.webp')!important}
+body[data-city-slug="bologna"] .city-hero-bg{background-image:url('../img/bologna-torri.webp')!important}
 body[data-city-slug="cagliari"] .city-hero-bg{background-image:url('../img/citta-cagliari-hero.webp')!important}
 body[data-city-slug="firenze"] .city-hero-bg{background-image:url('../img/firenze-duomo.webp')!important}
 body[data-city-slug="milano"] .city-hero-bg{background-image:url('../img/milano-duomo.webp')!important}
