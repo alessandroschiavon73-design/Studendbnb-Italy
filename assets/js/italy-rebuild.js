@@ -13,7 +13,7 @@
     bologna:'https://images.unsplash.com/photo-1682277303978-7ba42c704590?auto=format&fit=crop&fm=webp&q=82&w=2400',
     padova:'assets/img/padova-palazzo-ragione.webp',
     firenze:'assets/img/firenze-duomo.webp',
-    pisa:'https://images.unsplash.com/photo-1773467588137-16e619170f1d?auto=format&fit=crop&fm=webp&q=82&w=2400',
+    pisa:'assets/img/pisa-piazza-dei-miracoli.webp',
     palermo:'https://images.unsplash.com/photo-1774244764179-f34b65061ec6?auto=format&fit=crop&fm=webp&q=82&w=2400',
     bari:'https://images.unsplash.com/photo-1564863756233-e90e6d2f264b?auto=format&fit=crop&fm=webp&q=82&w=2400',
     cagliari:'assets/img/citta-cagliari-hero.webp'
