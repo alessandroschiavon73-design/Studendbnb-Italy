@@ -6,7 +6,7 @@
   if(window.STUDENTBNB_DATA){window.STUDENTBNB_DATA.cities=window.STUDENTBNB_CITIES.map(c=>({...c,count:c.slug==='padova'?358:0,live:true}));window.STUDENTBNB_DATA.listings=(window.STUDENTBNB_DATA.listings||[]).filter(l=>allowed.has(String(l.citySlug||l.city||'padova').toLowerCase()));}
 
   const hdCityImages={
-    milano:'https://images.unsplash.com/photo-1779043506531-c964ff6db172?auto=format&fit=crop&fm=webp&q=82&w=2400',
+    milano:'assets/img/milano-duomo.webp',
     roma:'assets/img/roma-colosseo.webp',
     napoli:'https://images.unsplash.com/photo-1773600876856-338c2e99cd45?auto=format&fit=crop&fm=webp&q=82&w=2400',
     torino:'assets/img/torino-mole.webp',
