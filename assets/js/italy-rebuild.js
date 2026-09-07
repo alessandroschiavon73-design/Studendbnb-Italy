@@ -7,15 +7,24 @@
 
   const hdCityImages={
     milano:'https://images.unsplash.com/photo-1779043506531-c964ff6db172?auto=format&fit=crop&fm=webp&q=82&w=2400',
-    roma:'https://images.unsplash.com/photo-1775401152452-3274a6b416a6?auto=format&fit=crop&fm=webp&q=82&w=2400'
+    roma:'https://images.unsplash.com/photo-1767724805713-5469061fb21f?auto=format&fit=crop&fm=webp&q=82&w=2400',
+    napoli:'https://images.unsplash.com/photo-1773600876856-338c2e99cd45?auto=format&fit=crop&fm=webp&q=82&w=2400',
+    torino:'https://images.unsplash.com/photo-1770462956276-898ea31652c2?auto=format&fit=crop&fm=webp&q=82&w=2400',
+    bologna:'https://images.unsplash.com/photo-1682277303978-7ba42c704590?auto=format&fit=crop&fm=webp&q=82&w=2400'
   };
 
-  window.STUDENTBNB_CITY_HERO={padova:'assets/img/padova-hero-v3.webp',bologna:'assets/img/citta-bologna.webp',milano:hdCityImages.milano,roma:hdCityImages.roma,torino:'assets/img/citta-torino.webp',firenze:'assets/img/citta-firenze.webp',pisa:'assets/img/citta-pisa.webp',napoli:'assets/img/citta-napoli.webp',bari:'assets/img/citta-bari-hero.webp',palermo:'assets/img/citta-palermo-hero.webp'};
+  window.STUDENTBNB_CITY_HERO={padova:'assets/img/padova-hero-v3.webp',bologna:hdCityImages.bologna,milano:hdCityImages.milano,roma:hdCityImages.roma,torino:hdCityImages.torino,firenze:'assets/img/citta-firenze.webp',pisa:'assets/img/citta-pisa.webp',napoli:hdCityImages.napoli,bari:'assets/img/citta-bari-hero.webp',palermo:'assets/img/citta-palermo-hero.webp'};
   window.studentBnBCityUrl=slug=>'citta.html?city='+encodeURIComponent(slug||'padova');
 
   function upgradeHomeCityImages(){
-    document.querySelectorAll('a.city-card[href*="city=milano"] img').forEach(img=>{img.src=hdCityImages.milano;img.removeAttribute('srcset');img.loading='lazy';img.decoding='async';});
-    document.querySelectorAll('a.city-card[href*="city=roma"] img').forEach(img=>{img.src=hdCityImages.roma;img.removeAttribute('srcset');img.loading='lazy';img.decoding='async';});
+    Object.entries(hdCityImages).forEach(([slug,src])=>{
+      document.querySelectorAll(`a.city-card[href*="city=${slug}"] img`).forEach(img=>{
+        img.src=src;
+        img.removeAttribute('srcset');
+        img.loading='lazy';
+        img.decoding='async';
+      });
+    });
   }
 
   document.addEventListener('DOMContentLoaded',function(){
