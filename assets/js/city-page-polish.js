@@ -12,7 +12,7 @@
     padova: "assets/img/padova-palazzo-ragione.webp",
     palermo: "assets/img/citta-palermo-hero.webp",
     pisa: "assets/img/citta-pisa.webp",
-    roma: "assets/img/citta-roma.webp",
+    roma: "assets/img/roma-colosseo.webp",
     torino: "assets/img/citta-torino.webp",
     trento: "assets/img/citta-trento-hero.webp",
     trieste: "assets/img/citta-trieste-hero.webp"
