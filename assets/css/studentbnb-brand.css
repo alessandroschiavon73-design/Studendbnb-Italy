@@ -27,7 +27,7 @@ body[data-city-slug="pisa"] .city-hero-bg{background-image:url('../img/pisa-piaz
 body[data-city-slug="roma"] .city-hero-bg{background-image:url('../img/roma-colosseo.webp')!important;background-position:center center}
 body[data-city-slug="torino"] .city-hero-bg{background-image:url('../img/torino-mole.webp')!important}
 body[data-city-slug="trento"] .city-hero-bg{background-image:url('../img/citta-trento-hero.webp')!important}
-body[data-city-slug="trieste"] .city-hero-bg{background-image:url('../img/citta-trieste-hero.webp')!important}
+body[data-city-slug="trieste"] .city-hero-bg{background-image:url('../img/trieste-piazza.webp')!important}
 
 /* StudentBnB test-stay price ladder */
 .test-price-breakdown{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:4px 9px;margin-top:4px;font-size:12px;font-weight:800;line-height:1.3;color:#40505a}
