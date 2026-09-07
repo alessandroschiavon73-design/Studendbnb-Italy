@@ -1,6 +1,6 @@
 (function(){
   'use strict';
-  const keep=[['roma','Roma'],['milano','Milano'],['napoli','Napoli'],['torino','Torino'],['bologna','Bologna'],['padova','Padova'],['firenze','Firenze'],['pisa','Pisa'],['palermo','Palermo'],['catania','Catania'],['bari','Bari'],['genova','Genova'],['pavia','Pavia'],['perugia','Perugia'],['verona','Verona'],['parma','Parma'],['ferrara','Ferrara'],['messina','Messina'],['venezia','Venezia'],['cosenza-rende','Cosenza–Rende']];
+  const keep=[['roma','Roma'],['milano','Milano'],['napoli','Napoli'],['torino','Torino'],['bologna','Bologna'],['padova','Padova'],['firenze','Firenze'],['pisa','Pisa'],['palermo','Palermo'],['catania','Catania'],['bari','Bari'],['genova','Genova'],['pavia','Pavia'],['perugia','Perugia'],['verona','Verona'],['parma','Parma'],['ferrara','Ferrara'],['messina','Messina'],['venezia','Venezia'],['cosenza-rende','Cosenza–Rende'],['cagliari','Cagliari'],['ancona','Ancona'],['trieste','Trieste']];
   const allowed=new Set(keep.map(x=>x[0]));
   window.STUDENTBNB_CITIES=keep.map(([slug,name])=>({slug,name,active:true,countryCode:'IT'}));
   if(window.STUDENTBNB_DATA){window.STUDENTBNB_DATA.cities=window.STUDENTBNB_CITIES.map(c=>({...c,count:c.slug==='padova'?358:0,live:true}));window.STUDENTBNB_DATA.listings=(window.STUDENTBNB_DATA.listings||[]).filter(l=>allowed.has(String(l.citySlug||l.city||'padova').toLowerCase()));}
