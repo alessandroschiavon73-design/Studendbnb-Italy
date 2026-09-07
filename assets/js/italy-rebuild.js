@@ -9,7 +9,7 @@
     milano:'https://images.unsplash.com/photo-1779043506531-c964ff6db172?auto=format&fit=crop&fm=webp&q=82&w=2400',
     roma:'assets/img/roma-colosseo.webp',
     napoli:'https://images.unsplash.com/photo-1773600876856-338c2e99cd45?auto=format&fit=crop&fm=webp&q=82&w=2400',
-    torino:'https://images.unsplash.com/photo-1770462956276-898ea31652c2?auto=format&fit=crop&fm=webp&q=82&w=2400',
+    torino:'assets/img/torino-mole.webp',
     bologna:'https://images.unsplash.com/photo-1682277303978-7ba42c704590?auto=format&fit=crop&fm=webp&q=82&w=2400',
     padova:'assets/img/padova-palazzo-ragione.webp',
     firenze:'https://images.unsplash.com/photo-1774116978984-969c27e5f9d9?auto=format&fit=crop&fm=webp&q=82&w=2400',
