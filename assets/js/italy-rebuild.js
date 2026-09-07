@@ -21,7 +21,8 @@
     trieste:'assets/img/trieste-piazza.webp'
   };
 
-  window.STUDENTBNB_CITY_HERO={padova:hdCityImages.padova,bologna:hdCityImages.bologna,milano:hdCityImages.milano,roma:hdCityImages.roma,torino:hdCityImages.torino,firenze:hdCityImages.firenze,pisa:hdCityImages.pisa,napoli:hdCityImages.napoli,bari:hdCityImages.bari,palermo:hdCityImages.palermo,cagliari:hdCityImages.cagliari};
+  // Single source of truth for every custom city hero.
+  window.STUDENTBNB_CITY_HERO={...hdCityImages};
   window.studentBnBCityUrl=slug=>'citta.html?city='+encodeURIComponent(slug||'padova');
 
   function upgradeHomeCityImages(){
