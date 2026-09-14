@@ -625,3 +625,4 @@ button{cursor:pointer}
     linear-gradient(to bottom,#fff 0,rgba(255,255,255,.84) 1.5%,transparent 5%,transparent 97%,rgba(255,255,255,.84) 99%,#fff 100%);
 }
 .map-stage.blended-map>.map-hotspot{z-index:2}
+.filters:has(.city-filter-grid){display:none!important}

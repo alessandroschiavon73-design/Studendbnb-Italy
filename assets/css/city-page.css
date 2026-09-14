@@ -57,3 +57,4 @@ body[data-city-slug="roma"] .city-hero-bg{background-image:url('../img/roma-colo
 body[data-city-slug="torino"] .city-hero-bg{background-image:url('../img/torino-mole.webp')!important}
 body[data-city-slug="trento"] .city-hero-bg{background-image:url('../img/citta-trento-hero.webp')!important}
 body[data-city-slug="trieste"] .city-hero-bg{background-image:url('../img/trieste-piazza.webp')!important}
+.filters:has(.city-filter-grid){display:none!important}

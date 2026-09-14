@@ -271,6 +271,12 @@
   function setupCityPage(){
     const list = qs("#listing-results");
     if(!list) return;
+    const listingFiltersEnabled = false;
+    const listingFilters = qs(".city-filter-grid")?.closest(".filters");
+    if(listingFilters){
+      listingFilters.hidden = !listingFiltersEnabled;
+      listingFilters.dataset.listingFilters = "deferred";
+    }
     const params = new URLSearchParams(location.search);
     const requestedCity = citySlugFromValue(params.get("city") || CONFIG.defaultCity);
     const city = cityBySlug(requestedCity);
@@ -299,31 +305,31 @@
     if(controls.zone){
       controls.zone.innerHTML = `<option value="">Tutte le zone</option>` + (ZONES[citySlug] || []).map(zone => `<option value="${escapeHtml(zone)}">${escapeHtml(zone)}</option>`).join("");
     }
-    if(params.get("type") && controls.type){
+    if(listingFiltersEnabled && params.get("type") && controls.type){
       const requested = params.get("type");
       const option = [...controls.type.options].find(o => o.value.toLowerCase().includes(requested.toLowerCase()) || requested.toLowerCase().includes(o.value.toLowerCase()));
       if(option) controls.type.value = option.value;
     }
-    if(params.get("formula") === "intergenerazionale" && controls.arrangement){
+    if(listingFiltersEnabled && params.get("formula") === "intergenerazionale" && controls.arrangement){
       controls.arrangement.value = "intergenerational";
     }
     function render(){
       let items = allListings().filter(l => {
         if(listingCitySlug(l) !== citySlug) return false;
-        if(controls.zone?.value && l.zone !== controls.zone.value) return false;
-        if(controls.type?.value && l.type !== controls.type.value) return false;
-        if(controls.price?.value && testStayPrices(l).p7 > Number(controls.price.value)) return false;
-        if(controls.expenses?.value === "included" && !l.expensesIncluded) return false;
-        if(controls.expenses?.value === "excluded" && l.expensesIncluded) return false;
-        if(controls.arrangement?.value === "intergenerational" && !l.intergenerational?.enabled) return false;
-        if(controls.arrangement?.value === "standard" && l.intergenerational?.enabled) return false;
-        if(controls.available?.value && l.availableISO && l.availableISO > controls.available.value) return false;
+        if(listingFiltersEnabled && controls.zone?.value && l.zone !== controls.zone.value) return false;
+        if(listingFiltersEnabled && controls.type?.value && l.type !== controls.type.value) return false;
+        if(listingFiltersEnabled && controls.price?.value && testStayPrices(l).p7 > Number(controls.price.value)) return false;
+        if(listingFiltersEnabled && controls.expenses?.value === "included" && !l.expensesIncluded) return false;
+        if(listingFiltersEnabled && controls.expenses?.value === "excluded" && l.expensesIncluded) return false;
+        if(listingFiltersEnabled && controls.arrangement?.value === "intergenerational" && !l.intergenerational?.enabled) return false;
+        if(listingFiltersEnabled && controls.arrangement?.value === "standard" && l.intergenerational?.enabled) return false;
+        if(listingFiltersEnabled && controls.available?.value && l.availableISO && l.availableISO > controls.available.value) return false;
         return true;
       });
       const sort = controls.sort?.value;
-      if(sort === "price-asc") items.sort((a,b) => a.price-b.price);
-      if(sort === "price-desc") items.sort((a,b) => b.price-a.price);
-      if(sort === "zone") items.sort((a,b) => a.zone.localeCompare(b.zone,"it"));
+      if(listingFiltersEnabled && sort === "price-asc") items.sort((a,b) => a.price-b.price);
+      if(listingFiltersEnabled && sort === "price-desc") items.sort((a,b) => b.price-a.price);
+      if(listingFiltersEnabled && sort === "zone") items.sort((a,b) => a.zone.localeCompare(b.zone,"it"));
       list.innerHTML = items.length ? items.map(listingCard).join("") : `<div class="empty-state"><h3>Nessun annuncio disponibile a ${escapeHtml(cityName)}</h3><p>Il collegamento è attivo: puoi essere tra i primi a pubblicare un alloggio o una richiesta per questa città.</p><div class="empty-actions"><a class="btn btn-yellow" href="pubblica.html?city=${encodeURIComponent(citySlug)}">Pubblica un annuncio</a><a class="btn btn-white" href="cerco.html?city=${encodeURIComponent(citySlug)}">Cerco alloggio</a></div></div>`;
       const count = qs("#result-count");
       if(count) count.textContent = `${items.length} ${items.length === 1 ? "offerta trovata" : "offerte trovate"} a ${cityName}`;
@@ -333,7 +339,7 @@
       if(pagination) pagination.hidden = items.length < 6;
       setupFavorites();
     }
-    Object.values(controls).filter(Boolean).forEach(c => c.addEventListener("change", render));
+    if(listingFiltersEnabled) Object.values(controls).filter(Boolean).forEach(c => c.addEventListener("change", render));
     render();
   }
 
