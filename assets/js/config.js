@@ -10,4 +10,4 @@ window.STUDENTBNB_CONFIG=Object.freeze({
  const apply=()=>{updateSeo();[['it','https://studentbnb.it/'],['es','https://studentbnb.es/'],['fr','https://studentbnb.fr/'],['de','https://student-bnb.de/'],['pl','https://studentbnb.pl/'],['pt','https://studentbnb.pt/'],['x-default','https://studentbnb.eu/']].forEach(x=>link('alternate',x[1],x[0]));};
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);else apply();
 })();
-(function(){if(document.querySelector('script[data-studentbnb-analytics]'))return;const s=document.createElement('script');s.src='assets/js/analytics.js?v=20260905';s.defer=true;s.dataset.studentbnbAnalytics='1';document.head.appendChild(s)})();
+(function(){if(document.querySelector('script[data-studentbnb-analytics]'))return;const s=document.createElement('script');s.src='assets/js/analytics.js?v=20260917-ga4';s.defer=true;s.dataset.studentbnbAnalytics='1';document.head.appendChild(s)})();
