@@ -1,3 +1,19 @@
+// Google Analytics 4 — StudentBnB Italia
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+window.gtag = gtag;
+gtag('js', new Date());
+gtag('config', 'G-JKE020896L');
+
+(function(){
+  if(document.querySelector('script[data-ga4-studentbnb]')) return;
+  const s=document.createElement('script');
+  s.async=true;
+  s.src='https://www.googletagmanager.com/gtag/js?id=G-JKE020896L';
+  s.dataset.ga4Studentbnb='1';
+  document.head.appendChild(s);
+})();
+
 (function(){
   if(window.__STUDENTBNB_ANALYTICS_LOADED__) return;
   window.__STUDENTBNB_ANALYTICS_LOADED__=true;
